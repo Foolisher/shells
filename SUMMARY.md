@@ -14,5 +14,5 @@
    * [diamond](diamond.md)
    * [tddl](tddl.md)
 * 电商
-   * 商品
+   * [商品](商品.md)
 
