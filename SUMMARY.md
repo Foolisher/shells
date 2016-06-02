@@ -11,5 +11,5 @@
 * [创业](创业.md)
 * [中间件](中间件.md)
    * [hsf](hsf.md)
-   * diamond
+   * [diamond](diamond.md)
 
