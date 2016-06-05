@@ -13,7 +13,7 @@
    * [hsf](hsf.md)
    * [diamond](diamond.md)
    * [tddl](tddl.md)
-       * 分表分库
+       * [分表分库](分表分库.md)
 * 电商
    * [商品](商品.md)
    * [类目](类目.md)
