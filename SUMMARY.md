@@ -18,5 +18,5 @@
 * 电商
    * [商品](商品.md)
    * [类目](类目.md)
-* JavaScript
+* [JavaScript](javascript.md)
 
