@@ -11,7 +11,8 @@
 
 
 ```
- int ring[] = 1000
+ int N = 100
+ int ring[] = N
  def add_node:
    
 
