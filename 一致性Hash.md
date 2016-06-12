@@ -15,6 +15,7 @@
  int ring[] = N
  def add_node:
    ring[N+1] = node
+   N++
    
     
 ```
