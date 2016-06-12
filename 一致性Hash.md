@@ -13,6 +13,7 @@
 ```
  int ring[] = 1000
  def add_node:
+   
 
 ```
 
