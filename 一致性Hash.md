@@ -16,6 +16,7 @@
  def add_node:
    ring[N+1] = node
    N++
+   sort(ring)
    
     
 ```
