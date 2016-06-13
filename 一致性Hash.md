@@ -16,7 +16,7 @@
  def add_node:
    ring[N+1] = node
    N++
-   sort(ring, (a,b)->)
+   sort(ring, (a,b)->hash(a)-hash(b))
    
     
 ```
