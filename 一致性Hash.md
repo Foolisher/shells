@@ -20,6 +20,7 @@
  
  def get:
    while hash(node) > hash(K);
+     node.next
    
     
 ```
