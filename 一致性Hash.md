@@ -19,7 +19,7 @@
    sort(ring, (a,b)->hash(a)-hash(b))
  
  def get:
-   foreach ring when hash(node) > hash(K);
+   while ring when hash(node) > hash(K);
    
     
 ```
