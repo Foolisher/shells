@@ -21,7 +21,7 @@
  def get:
    while hash(node) > hash(K);
      node = node.next
-   
+   return node.get(K)
     
 ```
 
