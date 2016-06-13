@@ -18,6 +18,9 @@
    N++
    sort(ring, (a,b)->hash(a)-hash(b))
  
+ def del_node:
+   
+ 
  def get:
    while hash(node) > hash(K);
      node = node.next
