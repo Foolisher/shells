@@ -17,6 +17,9 @@
    ring[N+1] = node
    N++
    sort(ring, (a,b)->hash(a)-hash(b))
+ 
+ def get:
+   foreach ring when hash(node) > hash(K);
    
     
 ```
