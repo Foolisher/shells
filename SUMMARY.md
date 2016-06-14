@@ -30,7 +30,7 @@
    * [事务](事务.md)
    * [IOC](IOC.md)
    * [SpringMVC](SpringMVC.md)
-   * Bean
+   * [Bean](Spring/Bean.md)
 * JVM
    * [ClassLoader](ClassLoader.md)
 * [架构与设计](架构与设计.md)
