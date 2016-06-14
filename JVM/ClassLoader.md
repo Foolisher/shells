@@ -6,7 +6,7 @@
 类加载器分为三类：
 
 1. **引导类加载器（bootstrap class loader）**
-  负责加载jdk基础类，如 rt.jar 
+  负责加载jdk核心库，如 rt.jar 
 
 2. **Extention ClassLoader**
   负责加载jdk扩展依赖 ext/*.jar 
