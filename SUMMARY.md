@@ -17,7 +17,7 @@
 * [中间件](中间件/中间件.md)
    * [hsf](中间件/hsf.md)
    * [diamond](中间件/diamond.md)
-   * [tddl](tddl.md)
+   * [tddl](中间件/tddl.md)
        * [架构](架构.md)
        * [分表分库](分表分库.md)
 * 电商
