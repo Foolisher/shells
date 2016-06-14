@@ -29,7 +29,7 @@
    * [AOP](Spring/AOP.md)
    * [事务](Spring/事务.md)
    * [IOC](Spring/IOC.md)
-   * [SpringMVC](SpringMVC.md)
+   * [SpringMVC](Spring/SpringMVC.md)
    * [Bean](Spring/Bean.md)
 * JVM
    * [ClassLoader](ClassLoader.md)
