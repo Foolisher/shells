@@ -18,13 +18,15 @@
 ## Joinpoint
 
 ## Advice
-通知，这里就是定义要植入逻辑的地方
+通知，这里就是定义要植入逻辑的地方，植入也分为
 
 ### BeforeAdivce
 
 ### AfterAdivce
 
 ### AroundAdvice
+
+### ThrowAdvice
 
 
 ## 植入原理
