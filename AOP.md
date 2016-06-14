@@ -18,7 +18,7 @@
 ## Joinpoint
 
 ## Advice
-通知，
+通知，这里就是定义要植入逻辑的地方
 
 ### BeforeAdivce
 
