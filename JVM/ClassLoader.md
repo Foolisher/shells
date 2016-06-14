@@ -1,11 +1,11 @@
 
 
 # ClassLoader
-类加载器就是用来将java字节码加载到jvm的工具。来加载器的资源可以来自内存、网络、内存
+类加载器就是用来将java字节码加载到jvm的工具。来加载器的资源可以来自内存、网络、内存甚至内存
 
 类加载器分为三类：
 
-1. **Bootstrap ClassLoader**
+1. **引导类加载器（bootstrap class loader）**
   负责加载jdk基础类，如 rt.jar 
 
 2. **Extention ClassLoader**
