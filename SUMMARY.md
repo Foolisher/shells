@@ -14,9 +14,9 @@
    * [传输协议](传输协议.md)
 * 算法
    * [一致性Hash](一致性Hash.md)
-* [中间件](中间件.md)
-   * [hsf](hsf.md)
-   * [diamond](diamond.md)
+* [中间件](中间件/中间件.md)
+   * [hsf](中间件/hsf.md)
+   * [diamond](中间件/diamond.md)
    * [tddl](tddl.md)
        * [架构](架构.md)
        * [分表分库](分表分库.md)
