@@ -26,9 +26,9 @@
    * [Cache](Cache.md)
    * [Base](base.md)
 * [Spring](Spring/README.md)
-   * [AOP](AOP.md)
-   * [事务](事务.md)
-   * [IOC](IOC.md)
+   * [AOP](Spring/AOP.md)
+   * [事务](Spring/事务.md)
+   * [IOC](Spring/IOC.md)
    * [SpringMVC](SpringMVC.md)
    * [Bean](Spring/Bean.md)
 * JVM
