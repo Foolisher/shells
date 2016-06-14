@@ -28,7 +28,7 @@
 * Spring
    * [AOP](AOP.md)
    * [事务](事务.md)
-   * IOC
+   * [IOC](IOC.md)
 * [架构与设计](架构与设计.md)
 * [JavaScript](javascript.md)
 * [创业](创业.md)
