@@ -10,4 +10,4 @@
   负责加载java扩展依赖 ext/*.jar 
 
 3. **App ClassLoader**
-  应用
+  应用类加载器，加载除jdk
