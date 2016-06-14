@@ -1,6 +1,8 @@
 
 
 # ClassLoader
+类加载器就是用来将java字节码加载到jvm的工具
+
 类加载器分为三类：
 
 1. **Bootstrap ClassLoader**
