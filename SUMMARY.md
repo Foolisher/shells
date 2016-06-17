@@ -34,9 +34,9 @@
 * [JVM](JVM/README.md)
    * [ClassLoader](JVM/ClassLoader.md)
    * [Class](JVM/Class.md)
+* 开发中的常见问题
+   * [代码可读性](开发中常见问题/代码可读性.md)
 * [架构与设计](架构与设计.md)
 * [JavaScript](javascript.md)
 * [创业](创业.md)
-* 开发中的常见问题
-   * [代码可读性](开发中常见问题/代码可读性.md)
 
