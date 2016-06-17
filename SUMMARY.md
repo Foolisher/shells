@@ -12,8 +12,8 @@
    * [ConcurrentHashMap](ConcurrentHashMap.md)
 * 计算机网络
    * [传输协议](传输协议.md)
-* [算法](算法)
-   * [一致性Hash](一致性Hash.md)
+* 算法
+   * [一致性Hash](算法/一致性Hash.md)
 * [中间件](中间件/中间件.md)
    * [hsf](中间件/hsf.md)
    * [diamond](中间件/diamond.md)
