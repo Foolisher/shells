@@ -116,16 +116,10 @@ bind(User.class)
 工厂式的注入有工厂方法式注入(上述提及)以及 **Provider** 模式的注入，当自定义工厂方法创建逻辑变得很复杂，而且多起来时，将这些创建逻辑都放在初始化类中是不可取的，这是另一种将这些逻辑分散的对象工厂模式出来了，它必须实现 `Provider` 接口的 `get()` 方法，以声明对象的创建逻辑。
 ```
 public class DatabaseTransactionLogProvider implements Provider<TransactionLog> {
-  private final Connection connection;
-
-  @Inject
-  public DatabaseTransactionLogProvider(Connection connection) {
-    this.connection = connection;
-  }
-
   public TransactionLog get() {  (1).声明创建TransactionLog具体实现类的工厂方法
     DatabaseTransactionLog transactionLog = new DatabaseTransactionLog();
-    transactionLog.setConnection(connection);
+    transactionLog.setConnection(...);
+    ...
     return transactionLog;
   }
 }
