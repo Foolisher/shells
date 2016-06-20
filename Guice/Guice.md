@@ -133,6 +133,14 @@ public class BillingModule extends AbstractModule {
 
 ```
 
+#### “无目标”的绑定
+还有一种绑定是不指定目标的
+```
+bind(MyConcreteClass.class);
+bind(AnotherConcreteClass.class).in(Singleton.class);
+```
+
+
 
 
 
