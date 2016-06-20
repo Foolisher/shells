@@ -1,5 +1,6 @@
 
 
+
 # Guice
 
 
@@ -25,7 +26,7 @@
 bind(String.class)
   .annotatedWith(Names.named("JDBC URL"))
   .toInstance("jdbc:mysql://localhost/pizza");
-// 在测试时我们希望自己
+// 在测试时我们希望为标注了测试用户的注入地方自定义实例，用法如下
 bind(User.class)
   .annotatedWith(Names.named("MockedUser"))
   .toInstanceWIth(new User(){
