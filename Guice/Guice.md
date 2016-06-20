@@ -39,6 +39,9 @@ public static void main(String[] args) {              (4).创建某Module的注�
 
 
 ## What
+
+
+
 Guice是一个更轻量的容器管理，DI框架，DI的目的是为了解耦依赖于实现，是模块化成为可能，有利于减少所依赖方变更带来的影响。同时动态的运行时注入是测试更加方便，因为我们可以在注入时Mock测试数据
 
 ## Why
