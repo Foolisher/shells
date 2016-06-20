@@ -25,5 +25,12 @@
 bind(String.class)
   .annotatedWith(Names.named("JDBC URL"))
   .toInstance("jdbc:mysql://localhost/pizza");
+bind(User.class)
+  .annotatedWith(Names.named("MockedUser"))
+  .toInstanceWIth(new User(){
+    {
+      this.name = "I am ";
+    }
+  });
 ```
 
