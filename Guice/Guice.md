@@ -42,7 +42,6 @@ public static void main(String[] args) {              (4).创建某Module的注�
 ## What
 
 
-
 Guice是一个更轻量的容器管理，DI框架，DI的目的是为了解耦依赖于实现，是模块化成为可能，有利于减少所依赖方变更带来的影响。同时动态的运行时注入是测试更加方便，因为我们可以在注入时Mock测试数据
 
 ## Why
@@ -164,12 +163,18 @@ bind(TransactionLog.class).to(InMemoryTransactionLog.class).in(Singleton.class);
 
 
 ### AOP
-容器技术少不了IOC，当然也少不了AOP，Guice也有AOP的，Guice的实现原理是通过继承父类，但它的aop实现方式与标准相较于Spring的AOP是要简介不少的，比如按表达式的匹配植入，对通知的前后或环绕通知或对异常的通知，
+容器技术少不了IOC，当然也少不了AOP，Guice也有AOP的，Guice的实现原理是通过继承父类，但它的aop实现方式与标准相较于Spring的AOP是要简介不少的，比如按表达式的匹配植入，对通知的前后或环绕通知或对异常的通知
+```
+public class NotOnWeekendsModule extends AbstractModule {
+  protected void configure() {
+                               (1).匹配带有注解NotOnWeekends的方法
+    bindInterceptor(Matchers.any(), Matchers.annotatedWith(NotOnWeekends.class), 
+        new WeekendBlocker()); (2).指定对这个方法的拦截逻辑
+  }
+}
+```
 
-
-
-
-当然相对于重量级的IOC框架Spring来说，Guice还是欠缺不少的，比如 **切面事务**、**ORM**、**Profile**、**缓存集成**、**MVC**，但作为一个轻量、快速的IOC框架来说，它有有其一席之地的，比如 **去配置化**、**模块化**、**效率高** 等特点，在实际项目中可酌情进行技术选型，其实我们项目中用到最多的就是 **IOC** + **AOP** 了，而Guice已具有这样的功能，是能满足我们大多数的
+当然相对于重量级的IOC框架Spring来说，Guice还是欠缺不少的，比如 **切面事务支持**、**ORM**、**Context Profile**、**缓存集成**、**MVC**，但作为一个轻量、快速的IOC框架来说，它有有其一席之地的，比如 **去配置化**、**模块化**、**效率高** 等特点，在实际项目中可酌情进行技术选型，其实我们项目中用到最多的就是 **IOC** + **AOP** 了，而Guice已具有这样的功能，是能满足我们大多数的项目需求的
 
 
 
