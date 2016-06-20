@@ -72,12 +72,25 @@ public Class OrderServiceImpl{
 }
 
 // (3).绑定实现类
-bind(
-
+bind(PayService.class)
+  .annotatedWith(PrePay.class)
+  .to(PrePayService.class);
+bind(PayService.class)
+  .annotatedWith(NormalPay.class)
+  .to(NormalPayService.class);
 
 ```
 
 #### 按名称注入
+按名称注入的实现目标与上述按注解注入是一样的，只是他们的方式不一样而已，若使用按名称注入的话上面的例子中就无需定义两个注解了，相对来说按名称注入较为简单一些，但从编码风格来说也有人更喜欢注解式注入，他们认为这样是代码看起来更严谨，容易通过IDE查找使用上下文，同时不容易出现编码带来的错误
+```
+bind(PayService.class)
+  .annotatedWith(Names.named("PrePay"))
+  .to(PrePayService.class);
+bind(PayService.class)
+  .annotatedWith(Names.named("NormalPay"))
+  .to(NormalPayService.class);
+```
 
 #### 实例化注入
   实例化注入与其他注入方式的不同在于实际被绑定对象不是有容器创建的，而是在定义注入逻辑时由用户自己实例化被注入对象，例如：
