@@ -169,7 +169,7 @@ bind(TransactionLog.class).to(InMemoryTransactionLog.class).in(Singleton.class);
 
 
 
-当然相对于重量级的IOC框架Spring来说，Guice还是欠缺不少的，比如 **切面事务**、**ORM**、**Profile**、**缓存集成**、****
+当然相对于重量级的IOC框架Spring来说，Guice还是欠缺不少的，比如 **切面事务**、**ORM**、**Profile**、**缓存集成**、**MVC**，但作为一个轻量、快速的IOC框架来说，它有有其一席之地的，比如 **去配置化**、**模块化**、**效率高**
 
 
 
