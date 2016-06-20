@@ -148,7 +148,7 @@ bind(AnotherConcreteClass.class).in(Singleton.class);
 
 
 #### 硬绑定（Just-in-time Bindings）
-这种绑定方式就像Spring中的 `@Service，@Component`指定了实现类，注入接口时就明确了绑定对象，当然这种模式的限制是注入对象是编译时就确认了，但这种方式相对使用起来简洁些
+这种绑定方式就像Spring中的 `@Service，@Component`指定了实现类，注入接口时就明确了绑定对象，当然这种模式的限制是注入对象是编译时就确认了，这种方式相对使用起来简洁些，但是在在接口上加@ImplementedBy注解并不推荐这样做，我们尽量是面向接口的同时还希望屏蔽具体实现原则
 
 
 ### Scop
