@@ -43,7 +43,11 @@ public static void main(String[] args) {              (4).创建某Module的注�
 Guice是一个更轻量的容器管理，DI框架，DI的目的是为了解耦依赖与实现，使模块化成为可能，有利于减少所依赖方变更带来的影响。同时动态的运行时注入使测试更加方便，因为我们可以在注入时Mock测试数据
 
 ## Why
-1. **快**： 取决于它的去xml配置式应用启动，因此特别快，但这块也只是限于启动时，
+1. **快**： 取决于它的去xml配置式应用启动，因此特别快，但这块也只是限于启动时，运行时并没有表现许多优势
+
+2. **灵活**： 灵活的注入方式，与装配方式，全是注解式定义DI对象，更迎合了编程式体验需求；多种注入方式给用户许多不同场景的注入需求
+
+3. ****
 
 
 ## How
@@ -176,6 +180,43 @@ public class NotOnWeekendsModule extends AbstractModule {
 当然相对于重量级的IOC框架Spring来说，Guice还是欠缺不少的，比如 **切面事务支持**、**ORM**、**Context Profile**、**缓存集成**、**MVC**，但作为一个轻量、快速的IOC框架来说，它有有其一席之地的，比如 **去配置化**、**模块化**、**效率高** 等特点，在实际项目中可酌情进行技术选型，其实我们项目中用到最多的就是 **IOC** + **AOP** 了，而Guice已具有这样的功能，是能满足我们大多数的项目需求的
 
 
+
+## web实战
+
+### web.xml 配置
+```
+<filter>  
+  <filter-name>guiceFilter</filter-name>  
+  <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+</filter>
+<filter-mapping>  
+  <filter-name>guiceFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<listener>
+  <listener-class>    org.packt.web.listener.FlightServletContextListener  </listener-class></listener>
+
+```
+
+
+### 初始化容器
+```
+public class FlightServletContextListener extends GuiceServletContextListener {
+	@Override
+	protected Injector getInjector() {
+		return Guice.createInjector(new ServletModule() {
+			@Override
+			protected void configureServlets() {
+				install(new MainModule());                     (1).安装初始化我们的业务模块
+				serve("/").with(IndexServlet.class);           (2).url mapping 首页
+				serve("/user.*").with(UserServlet.class);      (3).url mapping 用户相关
+			}
+		});
+	}
+}
+```
+然后部署web服务器，就ok了，就这么简单
 
 
 
