@@ -50,6 +50,7 @@ Guice是一个更轻量的容器管理，DI框架，DI的目的是为了解耦�
 ## How
 
 ### 注入技术
+> 注入技术有对象Field注入，set方法注入，构造函数注入，提供者模式注入，命令式注入，编译器注入等常见注入方式，下面对这些注入方式进行简介
 
 #### 普通注入
 普通注入是最直接的注入，直接绑定了接口的实现类，在容器进行注入时按绑定关系进行注入，是最常用的绑定关系定义
@@ -148,7 +149,6 @@ bind(AnotherConcreteClass.class).in(Singleton.class);
 这种绑定方式就像Spring中的 `@Service，@Component`指定了实现类，注入接口时就明确了绑定对象，当然这种模式的限制是注入对象是编译时就确认了，但这种方式相对使用起来简洁些
 
 
-
 ### Scop
 Guice也可指定对象作用域的，通常指定方式有
 ```
@@ -160,6 +160,8 @@ public class InMemoryTransactionLog implements TransactionLog {
 (2).通过初始化方式
 bind(TransactionLog.class).to(InMemoryTransactionLog.class).in(Singleton.class);
 ```
+
+
 
 
 
