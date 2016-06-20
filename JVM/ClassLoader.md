@@ -14,4 +14,4 @@
 3. **App ClassLoader**
   应用类加载器，加载除jdk外的Class
   
-除了引导启动加载器外，其他的加载器都有一个 parent class loader，
+除了引导启动加载器外，其他的加载器都有一个 parent class loader
