@@ -144,6 +144,8 @@ bind(AnotherConcreteClass.class).in(Singleton.class);
 从编程模式来说，有的人认为这是最佳的绑定方式，不过，呵呵，我没怎么觉得
 
 
+#### 硬绑定
+
 
 
 
