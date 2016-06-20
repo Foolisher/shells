@@ -144,8 +144,8 @@ bind(AnotherConcreteClass.class).in(Singleton.class);
 从编程模式来说，有的人认为这是最佳的绑定方式，不过，呵呵，我没怎么觉得
 
 
-#### 硬绑定
-这种绑定方式就像Spring中的 `@Service，@Component`指定了实现类，
+#### 硬绑定（Just-in-time Bindings）
+这种绑定方式就像Spring中的 `@Service，@Component`指定了实现类，注入接口时就指定这个
 
 
 
