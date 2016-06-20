@@ -123,7 +123,7 @@ public class DatabaseTransactionLogProvider implements Provider<TransactionLog> 
     this.connection = connection;
   }
 
-  public TransactionLog get() {
+  public TransactionLog get() {  (1).声明创建TransactionLog具体实现类的工厂方法
     DatabaseTransactionLog transactionLog = new DatabaseTransactionLog();
     transactionLog.setConnection(connection);
     return transactionLog;
@@ -133,7 +133,7 @@ public class DatabaseTransactionLogProvider implements Provider<TransactionLog> 
 public class BillingModule extends AbstractModule {
   @Override
   protected void configure() {
-    bind(TransactionLog.class)
+    bind(TransactionLog.class) (2).将TransactionLog的实现类指定为由DatabaseTransactionLogProvider提供
         .toProvider(DatabaseTransactionLogProvider.class);
   }
 
