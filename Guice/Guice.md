@@ -186,7 +186,7 @@ public class NotOnWeekendsModule extends AbstractModule {
 ### web.xml 配置
 ```
 <filter>  
-  <filter-name>guiceFilter</filter-name>  
+  <filter-name>guiceFilter</filter-name>    (1).用于配置请求控制器
   <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
 </filter>
 <filter-mapping>  
@@ -194,7 +194,7 @@ public class NotOnWeekendsModule extends AbstractModule {
   <url-pattern>/*</url-pattern>
 </filter-mapping>
 
-<listener>
+<listener>                                  (2).用于容器初始化，相当于Spring的容器启动上下文listener
   <listener-class>    org.packt.web.listener.FlightServletContextListener  </listener-class></listener>
 
 ```
