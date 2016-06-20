@@ -134,7 +134,7 @@ public class BillingModule extends AbstractModule {
 ```
 
 #### “无目标”的绑定
-有时我们的类并不是完全基于接口编程的，它们或许并没有实现类，例如有些Manager类，但这些Manager类又是需要在容器中管理的
+有时我们的类并不是完全基于接口编程的，它们或许并没有实现类，例如有些Manager类，但这些Manager类又是需要在容器中管理的，只需使用 `bind(..)` 方法即可
 ```
 bind(MyConcreteClass.class);
 bind(AnotherConcreteClass.class).in(Singleton.class);
