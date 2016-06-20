@@ -30,7 +30,7 @@ public class BillingModule extends AbstractModule {
 
 public static void main(String[] args) {              (4).创建某Module的注入器
     Injector injector = Guice.createInjector(new BillingModule());
-                                                      (5).获取实例对象
+                                                      (5).获取容器中的实例对象
     BillingService billingService = injector.getInstance(BillingService.class);
     ...
   }
@@ -52,13 +52,30 @@ Guice是一个更轻量的容器管理，DI框架，DI的目的是为了解耦�
 ### 注入技术
 
 #### 普通注入
-普通注入是最直接的注入，直接绑定了接口的实现类，在容器进行注入时按绑定关系进行注入
+普通注入是最直接的注入，直接绑定了接口的实现类，在容器进行注入时按绑定关系进行注入，是最常用的绑定关系定义
 ```
 // 当出现注入TransactionLog的地方，皆使用实现类DatabaseTransactionLog
 bind(TransactionLog.class).to(DatabaseTransactionLog.class);
 ```
 
 #### 注解式注入
+用自定义注解注入可以区分自己特殊的注入类型，例如，我们在下单服务中定义类两个支付服务，一个是预售支付，一个是一次性支付，它们有不同的实现，但接口签名是一样的，我们怎么利用Guice来实现这样的注入呢，当然Spring里面很简单，可以按名注入，我们尝试Guice是怎样做的
+```
+// (1).首先得定义两个注解
+@PrePay
+@NormalPay
+
+// (2).订单服务
+public Class OrderServiceImpl{
+  public void setPrePay(@PrePay PayService payService){...}
+  public void setNormalPay(@NormalPay PayService payService){...}
+}
+
+// (3).绑定实现类
+bind(
+
+
+```
 
 #### 按名称注入
 
