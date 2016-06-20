@@ -145,7 +145,7 @@ bind(AnotherConcreteClass.class).in(Singleton.class);
 
 
 #### 硬绑定
-
+这种绑定方式就像Spring中的 `@Service，@Component`指定了实现类，
 
 
 
