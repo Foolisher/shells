@@ -25,7 +25,7 @@
 bind(String.class)
   .annotatedWith(Names.named("JDBC URL"))
   .toInstance("jdbc:mysql://localhost/pizza");
-// 
+// 在测试时我们希望自己
 bind(User.class)
   .annotatedWith(Names.named("MockedUser"))
   .toInstanceWIth(new User(){
