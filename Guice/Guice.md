@@ -29,7 +29,7 @@ bind(User.class)
   .annotatedWith(Names.named("MockedUser"))
   .toInstanceWIth(new User(){
     {
-      this.name = "I am ";
+      this.name = "I am ET";
     }
   });
 ```
