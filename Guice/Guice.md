@@ -186,7 +186,7 @@ public class NotOnWeekendsModule extends AbstractModule {
 ### web.xml 配置
 ```
 <filter>  
-  <filter-name>guiceFilter</filter-name>    (1).用于配置请求控制器
+  <filter-name>guiceFilter</filter-name>    (1).用于配置请求控制器，在
   <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
 </filter>
 <filter-mapping>  
