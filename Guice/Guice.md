@@ -149,6 +149,17 @@ bind(AnotherConcreteClass.class).in(Singleton.class);
 
 
 
+### Scop
+Guice也可指定对象作用域的，通常指定方式有
+```
+(1).通过注解方式
+@Singleton
+public class InMemoryTransactionLog implements TransactionLog {
+...
+
+(2).通过初始化方式
+bind(TransactionLog.class).to(InMemoryTransactionLog.class).in(Singleton.class);
+```
 
 
 
