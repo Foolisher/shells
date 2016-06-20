@@ -141,7 +141,9 @@ bind(AnotherConcreteClass.class).in(Singleton.class);
 ```
 
 #### 构造函数绑定
-从编程模式来说，有的人认为这是最佳的绑定方式，
+从编程模式来说，有的人认为这是最佳的绑定方式，不过，呵呵，我没怎么觉得
+
+
 
 
 
