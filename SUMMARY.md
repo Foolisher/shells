@@ -21,7 +21,7 @@
        * [架构](架构.md)
        * [分表分库](分表分库.md)
    * [Kafka](中间件/Kafka.md)
-   * Mybatis
+   * [Mybatis](中间件/Mybatis.md)
 * 电商
    * [商品](商品.md)
    * [类目](类目.md)
