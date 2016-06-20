@@ -25,5 +25,5 @@
 bind(String.class)
   .annotatedWith(Names.named("JDBC URL"))
   .toInstance("jdbc:mysql://localhost/pizza");
-  ```
+```
 
