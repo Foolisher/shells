@@ -1,6 +1,7 @@
 
 
 
+
 # Guice
 开门见山，直接上Getting Started 
 ```
@@ -163,7 +164,15 @@ bind(TransactionLog.class).to(InMemoryTransactionLog.class).in(Singleton.class);
 
 
 ### AOP
-容器技术少不了IOC，当然也少不了AOP。
+容器技术少不了IOC，当然也少不了AOP，Guice也有AOP的，Guice的实现原理是通过继承父类，但它的aop实现方式与标准相较于Spring的AOP是要简介不少的，比如按表达式的匹配植入，对通知的前后或环绕通知或对异常的通知，
+
+
+
+
+当然相对于重量级的IOC框架Spring来说，Guice还是欠缺不少的，比如 **切面事务**、**ORM**、**Profile**、**缓存集成**、****
+
+
+
 
 
 
