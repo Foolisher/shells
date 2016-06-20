@@ -208,9 +208,16 @@ public class FlightServletContextListener extends GuiceServletContextListener {
 		return Guice.createInjector(new ServletModule() {
 			@Override
 			protected void configureServlets() {
-				install(new MainModule());                     (1).安装初始化我们的业务模块
-				serve("/").with(IndexServlet.class);           (2).url mapping 首页
-				serve("/user.*").with(UserServlet.class);      (3).url mapping 用户相关
+				install(new MainModule());                               (1).安装初始化我们的业务模块
+				serve("/").with(IndexServlet.class);                     (2).url mapping 首页
+				serve("/user.*").with(UserServlet.class);                (3).url mapping 用户相关
+                serveRegex("^response").with(FlightServlet.class);       (4).正则式url mapping
+                filter("/response").through(FlightSearchFilter.class);   (5).定义Filter
+                
+                bind(Filter.class).                                      (6).绑定容器bean
+                  annotatedWith(FlightFilter.class).
+                  to(FlightSearchFilter.class).in(Singleton.class);
+
 			}
 		});
 	}
