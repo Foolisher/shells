@@ -3,7 +3,7 @@
 
 * [Introduction](README.md)
 * [面向对象](面向对象.md)
-   * [Class](Class.md)
+   - [Class](Class.md)
 * [并发](并发.md)
    * [线程](线程.md)
    * [线程池](线程池.md)
