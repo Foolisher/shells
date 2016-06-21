@@ -194,7 +194,7 @@ public class NotOnWeekendsModule extends AbstractModule {
 </filter-mapping>
 
 <listener>                                  (2).用于容器初始化，相当于Spring的容器启动上下文listener
-  <listener-class>    org.packt.web.listener.FlightServletContextListener  </listener-class></listener>
+  <listener-class>org.packt.web.listener.FlightServletContextListener</listener-class></listener>
 
 ```
 
