@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * 计划提高
 * [面向对象](面向对象.md)
    * [Class](Class.md)
 * [并发](并发.md)
