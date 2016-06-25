@@ -22,6 +22,7 @@
    * [Kafka](中间件/Kafka.md)
    * [Mybatis](中间件/Mybatis.md)
    * [RocketMQ](中间件/RocketMQ.md)
+* [Guice](Guice/Guice.md)
 * [电商](电商/电商.md)
    * [商品](商品.md)
    * [类目](类目.md)
@@ -48,5 +49,4 @@
 * [创业](创业.md)
 * [计划提高](计划提高.md)
 * [感悟的笔记](感悟的笔记.md)
-* [Guice](Guice/Guice.md)
 
