@@ -74,7 +74,9 @@ bind(TransactionLog.class).to(DatabaseTransactionLog.class);
 public Class OrderServiceImpl{
   private PayService prePayService;
   private PayService normalPayService
+  @Inject
   public void setPrePay(@PrePay PayService payService){...}
+  @Inject
   public void setNormalPay(@NormalPay PayService payService){...}
 }
 
