@@ -72,6 +72,8 @@ bind(TransactionLog.class).to(DatabaseTransactionLog.class);
 
 // (2).订单服务
 public Class OrderServiceImpl{
+  private PayService prePayService;
+  private PayService payService
   public void setPrePay(@PrePay PayService payService){...}
   public void setNormalPay(@NormalPay PayService payService){...}
 }
