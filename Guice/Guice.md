@@ -70,7 +70,7 @@ bind(TransactionLog.class).to(DatabaseTransactionLog.class);
 @PrePay
 @NormalPay
 
-// (2).订单服务
+// (2).订单服务注入支付服务
 public Class OrderServiceImpl{
   private PayService prePayService;
   private PayService normalPayService
