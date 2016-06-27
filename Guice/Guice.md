@@ -159,7 +159,7 @@ bind(AnotherConcreteClass.class).in(Singleton.class);
 这种绑定方式就像Spring中的 `@Service，@Component`指定了实现类，注入接口时就明确了绑定对象，当然这种模式的限制是注入对象是编译时就确认了，这种方式相对使用起来简洁些，但是在在接口上加@ImplementedBy注解并不推荐这样做，我们尽量是面向接口的同时还希望屏蔽具体实现原则
 
 
-### Scop
+### 3.2 Scop
 Guice也可指定对象作用域的，通常指定方式有
 ```
 (1).通过注解方式
@@ -172,7 +172,7 @@ bind(TransactionLog.class).to(InMemoryTransactionLog.class).in(Singleton.class);
 ```
 
 
-### AOP
+### 3.3 AOP
 容器技术少不了IOC，当然也少不了AOP，Guice也有AOP的，Guice的实现原理是通过继承父类，但它的aop实现方式与标准相较于Spring的AOP是要简介不少的，比如按表达式的匹配植入，对通知的前后或环绕通知或对异常的通知
 ```
 public class NotOnWeekendsModule extends AbstractModule {
