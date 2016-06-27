@@ -14,6 +14,9 @@
 * 算法
    * [一致性Hash](算法/一致性Hash.md)
 * [中间件](中间件/中间件.md)
+   * Guava
+       * [Cache](Cache.md)
+       * [Base](base.md)
    * [hsf](中间件/hsf.md)
    * [diamond](中间件/diamond.md)
    * [tddl](中间件/tddl.md)
@@ -23,9 +26,6 @@
    * [Mybatis](中间件/Mybatis.md)
    * [Guice](Guice/Guice.md)
    * [RocketMQ](中间件/RocketMQ.md)
-* Guava
-   * [Cache](Cache.md)
-   * [Base](base.md)
 * [电商](电商/电商.md)
    * [商品](电商/商品.md)
    * [类目](电商/类目.md)
