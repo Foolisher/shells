@@ -1,7 +1,9 @@
 
 
 
-# Guice
+Guice
+===
+
 开门见山，直接上Getting Started 
 ```
 class BillingService { //                              (1).服务逻辑类
