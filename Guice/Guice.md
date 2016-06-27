@@ -190,7 +190,7 @@ public class NotOnWeekendsModule extends AbstractModule {
 
 ## 四、web实战
 
-### web.xml 配置
+### 4.1 web.xml 配置
 ```
 <filter>  
   <filter-name>guiceFilter</filter-name>    (1).用于配置请求控制器，与Jersey有相似的用法，通过Filter来拦截所有的请求，然后框架自己决定交给谁来处理
