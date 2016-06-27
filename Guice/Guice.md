@@ -207,7 +207,7 @@ public class NotOnWeekendsModule extends AbstractModule {
 ```
 
 
-### 初始化容器
+### 4.2 初始化容器
 ```
 public class FlightServletContextListener extends GuiceServletContextListener {
 	@Override
