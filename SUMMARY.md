@@ -24,8 +24,8 @@
    * [Guice](Guice/Guice.md)
    * [RocketMQ](中间件/RocketMQ.md)
 * [电商](电商/电商.md)
-   * [商品](商品.md)
-   * [类目](类目.md)
+   * [商品](电商/商品.md)
+   * [类目](电商/类目.md)
    * [交易](交易.md)
 * Guava
    * [Cache](Cache.md)
