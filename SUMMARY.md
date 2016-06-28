@@ -18,8 +18,6 @@
    * [Base](base.md)
 * [中间件](中间件/中间件.md)
    * Guava
-       * [Cache](Cache.md)
-       * [Base](base.md)
    * [hsf](中间件/hsf.md)
    * [diamond](中间件/diamond.md)
    * [tddl](中间件/tddl.md)
@@ -49,6 +47,7 @@
    * [使用Groovy进行单元测试](技术/使用Groovy进行单元测试.md)
    * [单元测试](技术/单元测试.md)
 * [架构与设计](架构与设计.md)
+   * 项目结构设计原则
 * [JavaScript](javascript.md)
 * [创业](创业.md)
 * [计划提高](计划提高.md)
