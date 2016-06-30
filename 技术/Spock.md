@@ -89,6 +89,7 @@ class DataCollectionRuleServiceImplTest extends Specification {
 		!rst4.isSuccess()
 	}
 
+}
 ```
 
 
