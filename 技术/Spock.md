@@ -61,7 +61,33 @@
 ```
 
 
+### 数据集规则管理
+```
+/**
+ * 数据集规则测试用例
+ * Created by wanggen/付笑 on 2016-06-15.
+ */
+class DataCollectionRuleServiceImplTest extends Specification {
 
+	def dataCollectionRuleDAO = Mock(TdeDataCollectionRuleDAO)
+	def ruleService = new DataCollectionRuleServiceImpl(dataCollectionRuleDAO: dataCollectionRuleDAO)
+
+	def "test bindRule"() {
+		when:
+		def rst1 = ruleService.bindRule(new TdeDataCollectionRuleDO())
+		def rst2 = ruleService.bindRule(new TdeDataCollectionRuleDO(collectionId: 1, ruleId: 1))
+
+		dataCollectionRuleDAO.getListByCondition(_) >> newArrayList(new TdeDataCollectionRuleDO()) >> newArrayList()
+		def rst3 = ruleService.bindRule(new TdeDataCollectionRuleDO(collectionId: 1, ruleId: 1, dataType: 1))
+		def rst4 = ruleService.bindRule(new TdeDataCollectionRuleDO(collectionId: 1, ruleId: 2, dataType: 1))
+		then:
+		rst1.message == 'collection.id.null'
+		rst2.message == 'error.dataType'
+		rst3.message == 'duplicate.collectionId-ruleId'
+		!rst4.isSuccess()
+	}
+
+```
 
 
 
