@@ -3,10 +3,11 @@
 
 
 # Spock
-Spock是一个基于Java与Groovy语言的测试框架，借助于Groovy优雅的表达式语言与独具一格的测试模式使它脱颖而出，
+Spock是一个基于Java与Groovy语言的测试框架，借助于Groovy优雅的表达式语言与独具一格的测试模式使它脱颖而出，当然他的发展也是站在JUnit、JMock、Groovy等巨人的肩膀上的
 
 
 ## 单元测试
+
 
 
 ## 什么是Spock
@@ -19,6 +20,11 @@ Spock是一个基于Java与Groovy语言的测试框架，借助于Groovy优雅�
 
 
 ## 实践
+
+### DSL
+
+#### expect
+相当于JUnit里面的断言，这里是我们单测期望的结果，
 
 ### 添加依赖
 ```
