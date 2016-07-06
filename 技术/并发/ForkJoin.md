@@ -3,6 +3,8 @@
  ForkJoin
 ==
 
+java7开始提供的forkjoin模式
+
 
 ![](http://cdn2.infoqstatic.com/statics_s1_20160622-0236/resource/articles/fork-join-introduction/zh/resources/21.png)
 
