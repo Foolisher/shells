@@ -38,7 +38,8 @@ ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并
 				if (end - start <= 50) {
 					int a = 0;
 					for (int i = start; i <= end; i++) {
-						a += i == 100 ? arr[i].doSomeThing(300000000) : arr[i].doSomeThing(1);
+						a += arr[i].doSomeThing(1);
+//						a += i == 100 ? arr[i].doSomeThing(300000000) : arr[i].doSomeThing(1);
 					}
 					return a;
 				}
@@ -71,15 +72,27 @@ ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并
 
 		forkJoinPool.submit(new AddTask(arr, 0, arr.length - 1));
 
-		System.out.println(submit.get());
-		System.out.println(started.elapsed(TimeUnit.MILLISECONDS));
+		submit.get();
+		System.out.println("并发耗时:   " + started.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
 
 		Stopwatch start = started.reset().start();
 		for (Task task : arr) {
 			task.doSomeThing(1);
 		}
 
-		System.out.println(start.elapsed(TimeUnit.MILLISECONDS));
+		System.out.println("串行耗时:   " + start.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
+
+
+		start = started.reset().start();
+		Arrays.stream(arr).parallel().forEach((action) -> {
+			action.doSomeThing(1);
+		});
+		System.out.println("并行流耗时: " + start.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
+
+并发耗时:   1311 毫秒
+串行耗时:   6170 毫秒
+并行流耗时: 1525 毫秒
+
 
 ```
 
