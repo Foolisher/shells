@@ -89,10 +89,10 @@ ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并
 		});
 		System.out.println("并行流耗时: " + start.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
 
+
 并发耗时:   1311 毫秒
 串行耗时:   6170 毫秒
 并行流耗时: 1525 毫秒
-
 
 ```
 
