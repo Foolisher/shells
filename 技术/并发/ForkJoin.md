@@ -21,24 +21,29 @@ ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并
 
 
 ```
+
 		class AddTask extends RecursiveTask<Integer> {
 
-			private final int[] arr;
-			private final int   start;
-			private final int   end;
+			private final Task[] arr;
+			private final int    start;
+			private final int    end;
 
-			public AddTask(int arr[], int start, int end) {
+			public AddTask(Task arr[], int start, int end) {
 				this.arr = arr;
 				this.start = start;
 				this.end = end;
 			}
 
 			protected Integer compute() {
-				if (end - start <= 1) {
-					return start == end ? arr[start] : arr[end] + arr[start];
+				if (end - start <= 50) {
+					int a = 0;
+					for (int i = start; i <= end; i++) {
+						a += i == 100 ? arr[i].doSomeThing(300000000) : arr[i].doSomeThing(1);
+					}
+					return a;
 				}
-				AddTask addTask1 = new AddTask(arr, start, (end - start) / 2);
-				AddTask addTask2 = new AddTask(arr, (end - start) / 2 + 1, end);
+				AddTask addTask1 = new AddTask(arr, start, (end - start) / 2 + start);
+				AddTask addTask2 = new AddTask(arr, (end - start) / 2 + 1 + start, end);
 
 				ForkJoinTask<Integer> fork1 = addTask1.fork();
 				ForkJoinTask<Integer> fork2 = addTask2.fork();
@@ -48,12 +53,33 @@ ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并
 		}
 
 
-		ForkJoinPool forkJoinPool = new ForkJoinPool(4);
-		int[]        arr          = new int[100];
-		for (int i = 0; i < 100; i++) {
-			arr[i] = i + 1;
+		ForkJoinPool forkJoinPool = new ForkJoinPool(10);
+		int          len          = 5000;
+		Task[]       arr          = new Task[len];
+		for (int i = 0; i < len; i++) {
+			arr[i] = (t) -> {
+				try {
+					Thread.sleep(t);
+				} catch (InterruptedException e) {
+				}
+				return t;
+			};
 		}
-		forkJoinPool.submit(new AddTask(arr, 0, arr.length-1));
+
+		Stopwatch             started = Stopwatch.createStarted();
+		ForkJoinTask<Integer> submit  = forkJoinPool.submit(new AddTask(arr, 0, arr.length - 1));
+
+		forkJoinPool.submit(new AddTask(arr, 0, arr.length - 1));
+
+		System.out.println(submit.get());
+		System.out.println(started.elapsed(TimeUnit.MILLISECONDS));
+
+		Stopwatch start = started.reset().start();
+		for (Task task : arr) {
+			task.doSomeThing(1);
+		}
+
+		System.out.println(start.elapsed(TimeUnit.MILLISECONDS));
 
 ```
 
