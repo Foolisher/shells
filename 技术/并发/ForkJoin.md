@@ -8,6 +8,8 @@ java7开始提供的forkjoin模式是一种任务分解并发执行模型，把�
 这是在java5-6版本之后一种较为新的并发模型，该种并发模型适用于大任务的并发执行，并且各个子任务之间互不干扰，该模型还支持工作窃取算法，某线程做完了自己的任务队列，还可以从其他队列里获取任务来执行，这样均衡了任务调度，避免任务倾斜，使并发度更加平衡
 
 
+
+
 ![](http://cdn2.infoqstatic.com/statics_s1_20160622-0236/resource/articles/fork-join-introduction/zh/resources/21.png)
 
 
