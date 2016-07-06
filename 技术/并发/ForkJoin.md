@@ -3,7 +3,7 @@
  ForkJoin
 ==
 
-java7开始提供的forkjoin模式是一种任务分解并发执行模型，把大任务分解(Fork)为一个个的小任务(Task)，然后合并
+java7开始提供的forkjoin模式是一种任务分解并发执行模型，把大任务分解(Fork)为一个个的小任务(Task)，然后将小人物的结果合并回来
 
 
 ![](http://cdn2.infoqstatic.com/statics_s1_20160622-0236/resource/articles/fork-join-introduction/zh/resources/21.png)
