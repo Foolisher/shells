@@ -4,7 +4,7 @@
 ==
 
 
-
+![](http://cdn2.infoqstatic.com/statics_s1_20160622-0236/resource/articles/fork-join-introduction/zh/resources/21.png)
 
 
 ```
