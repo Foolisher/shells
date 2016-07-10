@@ -95,6 +95,10 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 
 ## 责任链模式
+![](责任链模式.png)
+
+
+
 
 
 ## 并发流
