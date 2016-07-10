@@ -33,7 +33,23 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 ```
 
 ### 案例
+```java
 
+		// 需求: 对一个地址表中求每个地区的平均年龄
+		// SELECT SUM(age),address
+		//   FROM user_infos
+		// GROUP BY address
+
+		Object rst = Stream.of(
+						"lee,23,hz",
+						"alen,28,newyork",
+						"hanm,25,beijing",
+						"lei,24,beijing")
+						.map(l -> l.split(","))
+						.collect(Collectors.groupingBy(line->line[2], Collectors.summingInt(o->Integer.parseInt(o[1]))))
+						;
+
+```
 
 
 ## 责任链模式
