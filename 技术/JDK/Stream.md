@@ -38,7 +38,7 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 
  // 需求: 对一个地址表中求每个地区的平均年龄
- // SELECT SUM(age),address
+ // SELECT AVG(age),address
  //   FROM user_infos
  // GROUP BY address
 
