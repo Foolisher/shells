@@ -3,13 +3,13 @@
         "ace",
         "splitter",
         "prism",
-        "-highlight",
-        "disqus"
+        "-highlight"
+       /* "disqus" */
     ],
     "pluginsConfig": {
-      "disqus": {
+      /*"disqus": {
         "shortName": "gitbookuse"
-      }
+      }*/
     },
     "sharing": {
     "weibo": true,
