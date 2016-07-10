@@ -40,6 +40,47 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
  //   FROM user_infos
  // GROUP BY address
 
+ // A. Java6/7 版本实现
+        List<String> rawRows = new ArrayList<>();
+		rawRows.add("lee,23,hz");
+		rawRows.add("alen,28,newyork");
+		rawRows.add("hanm,25,beijing");
+		rawRows.add("lei,24,beijing");
+		rawRows.add("silen,27,");
+
+		// 1. 分隔字符串为行
+		List<String[]> rows = new ArrayList<>();
+		for (String rawRow : rawRows) {
+			String[] cols = rawRow.split(",");
+			if (cols.length == 3 && !isNullOrEmpty(cols[2]))
+				rows.add(rawRow.split(","));
+		}
+
+		// 2. 按地区分组
+		Map<String, List<String[]>> byAddr = new HashMap<>();
+		for (String[] row : rows) {
+			List<String[]> rows1 = byAddr.get(row[2]);
+			if (rows1 == null) {
+				rows1 = new ArrayList<>();
+				byAddr.put(row[2], rows1);
+			}
+			rows1.add(row);
+		}
+
+		// 3. 按分组聚合每组数据
+		Map<String, Double> avg = new HashMap<>();
+		for (String addr : byAddr.keySet()) {
+			double         ageSum = 0, ageAve = 0;
+			List<String[]> rows2  = byAddr.get(addr);
+			for (String[] line : rows2) {
+				ageSum += Integer.parseInt(line[1]);
+			}
+			ageAve = ageSum / rows2.size();
+			avg.put(addr, ageAve);
+		}
+
+
+
  Object rst = Stream.of(
 				"lee,23,hz",
 				"alen,28,newyork",
