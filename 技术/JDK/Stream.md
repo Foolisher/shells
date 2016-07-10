@@ -16,9 +16,11 @@ map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 
 ```
 forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator
 ```
-+ Short-circuiting：
-anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
++ Short-circuiting：
+```
+anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
+```
 ## 责任链模式
 
 
