@@ -5,7 +5,7 @@ Guice
 ===
 
 开门见山，直接上Getting Started 
-```
+```java
 class BillingService { //                              (1).服务逻辑类
   private final CreditCardProcessor processor; //      
   private final TransactionLog transactionLog;
@@ -69,7 +69,7 @@ bind(TransactionLog.class).to(DatabaseTransactionLog.class);
 
 #### 3.1.2 注解式注入
 用自定义注解注入可以区分自己特殊的注入类型，例如，我们在下单服务中定义类两个支付服务，一个是预售支付，一个是一次性支付，它们有不同的实现，但接口签名是一样的，我们怎么利用Guice来实现这样的注入呢，当然Spring里面很简单，可以按名注入，我们尝试Guice是怎样做的
-```
+```java
 // (1).首先得定义两个注解
 @PrePay
 @NormalPay
@@ -96,7 +96,7 @@ bind(PayService.class)
 
 #### 3.1.3 按名称注入
 按名称注入的实现目标与上述按注解注入是一样的，只是他们的方式不一样而已，若使用按名称注入的话上面的例子中就无需定义两个注解了，相对来说按名称注入较为简单一些，但从编码风格来说也有人更喜欢注解式注入，他们认为这样是代码看起来更严谨，容易通过IDE查找使用上下文，同时不容易出现编码带来的错误
-```
+```java
 bind(PayService.class)
   .annotatedWith(Names.named("PrePay"))
   .to(PrePayService.class);
@@ -107,7 +107,7 @@ bind(PayService.class)
 
 ####3.1.4 实例化注入
   实例化注入与其他注入方式的不同在于实际被绑定对象不是有容器创建的，而是在定义注入逻辑时由用户自己实例化被注入对象，例如：
-```
+```java
 bind(String.class)
   .annotatedWith(Names.named("JDBC URL"))   (1). 字符串注入必须按名注入
   .toInstance("jdbc:mysql://localhost/pizza");
@@ -127,7 +127,7 @@ bind(User.class)
 
 #### 3.1.6 注解式对象工厂方法
 工厂式的注入有工厂方法式注入(上述提及)以及 **Provider** 模式的注入，当自定义工厂方法创建逻辑变得很复杂，而且多起来时，将这些创建逻辑都放在初始化类中是不可取的，这是另一种将这些逻辑分散的对象工厂模式出来了，它必须实现 `Provider` 接口的 `get()` 方法，以声明对象的创建逻辑。
-```
+```java
 public class DatabaseTransactionLogProvider implements Provider<TransactionLog> {
   public TransactionLog get() {  (1).声明创建TransactionLog具体实现类的工厂方法
     DatabaseTransactionLog transactionLog = new DatabaseTransactionLog();
@@ -148,7 +148,7 @@ public class BillingModule extends AbstractModule {
 
 #### 3.1.7 “无目标”的绑定
 有时我们的类并不是完全基于接口编程的，它们或许并没有实现类，例如有些Manager类，但这些Manager类又是需要在容器中管理的，只需使用 `bind(..)` 方法即可
-```
+```java
 bind(MyConcreteClass.class);
 bind(AnotherConcreteClass.class).in(Singleton.class);
 ```
@@ -163,7 +163,7 @@ bind(AnotherConcreteClass.class).in(Singleton.class);
 
 ### 3.2 Scop
 Guice也可指定对象作用域的，通常指定方式有
-```
+```java
 (1).通过注解方式
 @Singleton
 public class InMemoryTransactionLog implements TransactionLog {
@@ -176,7 +176,7 @@ bind(TransactionLog.class).to(InMemoryTransactionLog.class).in(Singleton.class);
 
 ### 3.3 AOP
 容器技术少不了IOC，当然也少不了AOP，Guice也有AOP的，Guice的实现原理是通过继承父类，但它的aop实现方式与标准相较于Spring的AOP是要简介不少的，比如按表达式的匹配植入，对通知的前后或环绕通知或对异常的通知
-```
+```java
 public class NotOnWeekendsModule extends AbstractModule {
   protected void configure() {
                                (1).匹配带有注解NotOnWeekends的方法
@@ -193,7 +193,7 @@ public class NotOnWeekendsModule extends AbstractModule {
 ## 四、web实战
 
 ### 4.1 web.xml 配置
-```
+```xml
 <filter>  
   <filter-name>guiceFilter</filter-name>    (1).用于配置请求控制器，与Jersey有相似的用法，通过Filter来拦截所有的请求，然后框架自己决定交给谁来处理
   <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
@@ -210,7 +210,7 @@ public class NotOnWeekendsModule extends AbstractModule {
 
 
 ### 4.2 初始化容器
-```
+```java
 public class FlightServletContextListener extends GuiceServletContextListener {
 	@Override
 	protected Injector getInjector() {
