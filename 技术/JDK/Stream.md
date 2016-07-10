@@ -12,7 +12,7 @@ Map/Reduce模型我们已经知道这是在Hadoop中应用的一个并行大数�
 ### 流的操作
 
 + **Intermediate**:
-```
+```java
 map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、 sequential、 unordered
 ```
 
@@ -22,7 +22,7 @@ forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count
 ```
 
 + **Short-circuiting**:
-```
+```java
 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 ```
 
