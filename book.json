@@ -2,7 +2,8 @@
     "plugins": [
         "ace",
         "splitter",
-        "prism"
+        "prism",
+        "-highlight"
     ],
     "pluginsConfig": {}
 }
