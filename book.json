@@ -4,12 +4,9 @@
         "splitter",
         "prism",
         "-highlight"
-       /* "disqus" */
     ],
     "pluginsConfig": {
-      /*"disqus": {
-        "shortName": "gitbookuse"
-      }*/
+      
     },
     "sharing": {
     "weibo": true,
