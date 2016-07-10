@@ -40,7 +40,7 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
  //   FROM user_infos
  // GROUP BY address
 
- // A. Java6/7 版本实现
+ // A. Java6/7 实现
         List<String> rawRows = new ArrayList<>();
 		rawRows.add("lee,23,hz");
 		rawRows.add("alen,28,newyork");
