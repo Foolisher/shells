@@ -17,7 +17,7 @@ map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 
 ```
 
 + **Terminal**:
-```
+```java
 forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator
 ```
 
