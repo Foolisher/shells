@@ -5,5 +5,17 @@
         "prism",
         "-highlight"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {},
+    "sharing": {
+    "weibo": true,
+    "facebook": true,
+    "twitter": true,
+    "google": false,
+    "instapaper": false,
+    "vk": false,
+    "all": [
+        "facebook", "google", "twitter",
+            "weibo", "instapaper"
+    ]
+}
 }
