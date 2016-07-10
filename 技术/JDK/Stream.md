@@ -37,20 +37,20 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 
 
+ // 需求: 对一个地址表中求每个地区的平均年龄
+ // SELECT SUM(age),address
+ //   FROM user_infos
+ // GROUP BY address
 
-		// 需求: 对一个地址表中求每个地区的平均年龄
-		// SELECT SUM(age),address
-		//   FROM user_infos
-		// GROUP BY address
-
-		Object rst = Stream.of(
-						"lee,23,hz",
-						"alen,28,newyork",
-						"hanm,25,beijing",
-						"lei,24,beijing")
-						.map(l -> l.split(","))
-						.collect(Collectors.groupingBy(line->line[2], Collectors.summingInt(o->Integer.parseInt(o[1]))))
-						;
+ Object rst = Stream.of(
+				"lee,23,hz",
+				"alen,28,newyork",
+				"hanm,25,beijing",
+				"lei,24,beijing",
+				"silen,27,")
+				.map(l -> l.split(","))
+				.filter(l -> l.length == 3 && !isNullOrEmpty(l[2]))
+				.collect(Collectors.groupingBy(line -> line[2], Collectors.averagingInt(o -> Integer.parseInt(o[1]))));
 
 ```
 
