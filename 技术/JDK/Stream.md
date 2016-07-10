@@ -95,7 +95,9 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 
 ## 责任链模式
-Stream主要体现在对责任链模式的精巧设计上，
+Stream主要体现在对责任链模式的精巧设计上，对处理任务实现了灵活编排，提供统一的接口。在java web中我们其实早已领教过责任链模式了，一个个的Filter组成一个链式处理方案，自己处理完后交给下一个接力。
+
+责任链模式是一种优秀的思想，给客户端提供一致的api，
 ![](责任链模式.png)
 
 
