@@ -6,7 +6,11 @@
         "-highlight",
         "disqus"
     ],
-    "pluginsConfig": {},
+    "pluginsConfig": {
+      "disqus": {
+        "shortName": "gitbookuse"
+      }
+    },
     "sharing": {
     "weibo": true,
     "facebook": true,
