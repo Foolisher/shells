@@ -7,17 +7,17 @@
 
 ### 流的操作
 
-+ Intermediate:
++ **Intermediate**:
 ```
 map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、 sequential、 unordered
 ```
 
-+ Terminal：
++ **Terminal**：
 ```
 forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator
 ```
 
-+ Short-circuiting：
++ **Short-circuiting**：
 ```
 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 ```
