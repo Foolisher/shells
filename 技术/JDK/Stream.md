@@ -1,5 +1,6 @@
 
 
+
 # Stream
 在Java8中的 `Stream` 提供了针对集合非常便利的操作模式，不但提供了数据处理管道模式，还提供了数据聚合功能，同时结合lambda新特性，许多对集合处理需要大篇幅代码的场景，或许Stream一行就能搞定，对于代码我们一直最求的就是开发效率和可读性，而Stream它做到了！
 
@@ -10,7 +11,9 @@ Map/Reduce模型我们已经知道这是在Hadoop中应用的一个并行大数�
 ## 使用场景
 
 ### 流的操作
-流式语法
+Stream分为动作类api和聚合类api，动作类api是对数据上定义的一个个处理动作，他们会按设定的顺序依次执行，这类动作具有惰性，他们在定义时并没有发生什么，只是定义了一系列的处理逻辑
+
+还有一类是终结api，我想把它称作收集api，这类api会立即出发在集合上的迭代计算，并在最后按
 
 + **Intermediate**:
 ```java
@@ -26,6 +29,11 @@ forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count
 ```java
 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 ```
+
+
+### 案例
+
+
 
 ## 责任链模式
 
