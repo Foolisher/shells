@@ -98,7 +98,13 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 ![](责任链模式.png)
 
 
+### 角色介绍
 
++ Client：客户端
+
++ Handler：抽象处理者
+
++ ConcreteHandler：具体处理者
 
 
 ## 并发流
