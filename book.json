@@ -3,7 +3,8 @@
         "ace",
         "splitter",
         "prism",
-        "-highlight"
+        "-highlight",
+        "disqus"
     ],
     "pluginsConfig": {},
     "sharing": {
