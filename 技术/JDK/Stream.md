@@ -32,7 +32,6 @@ forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count
 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 ```
 
-
 ### 案例
 
 
