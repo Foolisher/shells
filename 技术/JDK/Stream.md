@@ -35,8 +35,6 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 ### 案例1
 ```java
 
-
-
  // 需求: 对一个地址表中求每个地区的平均年龄
  // SELECT AVG(age),address
  //   FROM user_infos
