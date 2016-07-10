@@ -27,7 +27,7 @@ Spock是一个基于Java与Groovy语言的测试框架，借助于Groovy优雅�
 相当于JUnit里面的断言，这里是我们单测期望的结果，
 
 ### 添加依赖
-```
+```xml
 
 		<!-- Spock Framework basic dependencies: -->
 		<dependency>
@@ -71,7 +71,7 @@ Spock是一个基于Java与Groovy语言的测试框架，借助于Groovy优雅�
 ### 数据集规则管理
 
 **Spock 版本**
-```
+```java
 /**
  * 数据集规则测试用例
  * Created by wanggen/付笑 on 2016-06-15.
