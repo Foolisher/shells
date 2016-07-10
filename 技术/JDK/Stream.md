@@ -80,7 +80,7 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 		}
 
 
-
+ // B. Java8 Stream实现版
  Object rst = Stream.of(
 				"lee,23,hz",
 				"alen,28,newyork",
