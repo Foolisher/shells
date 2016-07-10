@@ -95,7 +95,7 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 
 ## 责任链模式
-
+Stream主要体现在对责任链模式的精巧设计上，
 ![](责任链模式.png)
 
 
