@@ -95,6 +95,7 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 
 ## 责任链模式
+
 ![](责任链模式.png)
 
 
@@ -104,7 +105,7 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 + **Handler**：抽象处理者
 
-+ **ConcreteHandler**：具体处理者，它含有下一个处理这的引用，
++ **ConcreteHandler**：具体处理者，它含有下一个处理这的引用
 
 
 ## 并发流
