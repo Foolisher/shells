@@ -104,7 +104,7 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 
 + **Handler**：抽象处理者
 
-+ **ConcreteHandler**：具体处理者
++ **ConcreteHandler**：具体处理者，
 
 
 ## 并发流
