@@ -113,7 +113,7 @@ Stream主要体现在对责任链模式的精巧设计上，对处理任务实�
 
 责任链模式是一种优秀的思想，给客户端提供一致的api，任务任意灵活编排，例如我们可以借鉴这种思想在下单逻辑的流程中，可以使用在招商报名流程中，保证了任务的顺序关系，同时将实现与控制逻辑分离，任务可增可减，实现流程编排。
 
-![](http://fuxiao.oss-cn-shanghai.aliyuncs.com/logfuxiao2016-07-07-16-00-00-0001)
+![](http://fuxiao.oss-cn-shanghai.aliyuncs.com/book/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F.png)
 
 
 ### 角色介绍
