@@ -91,6 +91,7 @@ anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
 				.filter(l -> l.length == 3 && !isNullOrEmpty(l[2]))
 				.collect(Collectors.groupingBy(line -> line[2], Collectors.averagingInt(o -> Integer.parseInt(o[1]))));
 
+
  // C. scala 版本
  val rst = Seq(
    "lee,23,hz",
@@ -112,7 +113,7 @@ Stream主要体现在对责任链模式的精巧设计上，对处理任务实�
 
 责任链模式是一种优秀的思想，给客户端提供一致的api，任务任意灵活编排，例如我们可以借鉴这种思想在下单逻辑的流程中，可以使用在招商报名流程中，保证了任务的顺序关系，同时将实现与控制逻辑分离，任务可增可减，实现流程编排。
 
-![](责任链模式.png)
+![](http://fuxiao.oss-cn-shanghai.aliyuncs.com/logfuxiao2016-07-07-16-00-00-0001)
 
 
 ### 角色介绍
