@@ -16,9 +16,7 @@ java7开始提供的forkjoin模式是一种任务分解并发执行模型，把�
 ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并发模型的设计初衷就是为了划分任务边界，减少锁竞争，若我们再在任务里面加入一些资源锁，那样有造成死锁的风险，当然只是有可能，这就需要开发者自己把握了。
 
 
-
-
-![](http://cdn2.infoqstatic.com/statics_s1_20160622-0236/resource/articles/fork-join-introduction/zh/resources/21.png)
+![](http://fuxiao.oss-cn-shanghai.aliyuncs.com/book/Forkjoin.png)
 
 
 ```
