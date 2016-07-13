@@ -1,11 +1,6 @@
+# 《ForkJoin》
 
-
-
- ForkJoin
-====
-
-
-java7开始提供的forkjoin模式是一种任务分解并发执行模型，把大任务分解(Fork)为一个个的小任务(Task)，然后将小任务的结果合并(join)再逐层地返回回去。我们常见提高并发的手段有分解任务，减低锁竞争，在该种并发模式中由于独自线程处理独自的任务，没有了锁竞争，同时分解任务，让多线程可以在这些任务上执行，对空间进行裁剪，对时间也相应的缩小。
+java7开始提供的forkjoin模式是一种任务分解并发执行模型，把大任务分解\(Fork\)为一个个的小任务\(Task\)，然后将小任务的结果合并\(join\)再逐层地返回回去。我们常见提高并发的手段有分解任务，减低锁竞争，在该种并发模式中由于独自线程处理独自的任务，没有了锁竞争，同时分解任务，让多线程可以在这些任务上执行，对空间进行裁剪，对时间也相应的缩小。
 
 这是在java5-6版本之后一种较为新的并发模型，该种并发模型适用于大任务的并发执行，并且各个子任务之间互不干扰，该模型还支持工作窃取算法，某线程做完了自己的任务队列，还可以从其他队列里获取任务来执行，这样均衡了任务调度，避免任务倾斜，使并发度更加平衡
 
@@ -15,78 +10,76 @@ java7开始提供的forkjoin模式是一种任务分解并发执行模型，把�
 
 ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并发模型的设计初衷就是为了划分任务边界，减少锁竞争，若我们再在任务里面加入一些资源锁，那样有造成死锁的风险，当然只是有可能，这就需要开发者自己把握了。
 
-
 ![](http://fuxiao.oss-cn-shanghai.aliyuncs.com/book/Forkjoin.png)
-
 
 ```java
 
-		class AddTask extends RecursiveTask<Integer> {
+        class AddTask extends RecursiveTask<Integer> {
 
-			private final Task[] arr;
-			private final int    start;
-			private final int    end;
+            private final Task[] arr;
+            private final int    start;
+            private final int    end;
 
-			public AddTask(Task arr[], int start, int end) {
-				this.arr = arr;
-				this.start = start;
-				this.end = end;
-			}
+            public AddTask(Task arr[], int start, int end) {
+                this.arr = arr;
+                this.start = start;
+                this.end = end;
+            }
 
-			protected Integer compute() {
-				if (end - start <= 50) {
-					int a = 0;
-					for (int i = start; i <= end; i++) {
-						a += arr[i].doSomeThing(1);
-//						a += i == 100 ? arr[i].doSomeThing(300000000) : arr[i].doSomeThing(1);
-					}
-					return a;
-				}
-				AddTask addTask1 = new AddTask(arr, start, (end - start) / 2 + start);
-				AddTask addTask2 = new AddTask(arr, (end - start) / 2 + 1 + start, end);
+            protected Integer compute() {
+                if (end - start <= 50) {
+                    int a = 0;
+                    for (int i = start; i <= end; i++) {
+                        a += arr[i].doSomeThing(1);
+//                        a += i == 100 ? arr[i].doSomeThing(300000000) : arr[i].doSomeThing(1);
+                    }
+                    return a;
+                }
+                AddTask addTask1 = new AddTask(arr, start, (end - start) / 2 + start);
+                AddTask addTask2 = new AddTask(arr, (end - start) / 2 + 1 + start, end);
 
-				ForkJoinTask<Integer> fork1 = addTask1.fork();
-				ForkJoinTask<Integer> fork2 = addTask2.fork();
+                ForkJoinTask<Integer> fork1 = addTask1.fork();
+                ForkJoinTask<Integer> fork2 = addTask2.fork();
 
-				return fork1.join() + fork2.join();
-			}
-		}
-
-
-		ForkJoinPool forkJoinPool = new ForkJoinPool(10);
-		int          len          = 5000;
-		Task[]       arr          = new Task[len];
-		for (int i = 0; i < len; i++) {
-			arr[i] = (t) -> {
-				try {
-					Thread.sleep(t);
-				} catch (InterruptedException e) {
-				}
-				return t;
-			};
-		}
-
-		Stopwatch             started = Stopwatch.createStarted();
-		ForkJoinTask<Integer> submit  = forkJoinPool.submit(new AddTask(arr, 0, arr.length - 1));
-
-		forkJoinPool.submit(new AddTask(arr, 0, arr.length - 1));
-
-		submit.get();
-		System.out.println("并发耗时:   " + started.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
-
-		Stopwatch start = started.reset().start();
-		for (Task task : arr) {
-			task.doSomeThing(1);
-		}
-
-		System.out.println("串行耗时:   " + start.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
+                return fork1.join() + fork2.join();
+            }
+        }
 
 
-		start = started.reset().start();
-		Arrays.stream(arr).parallel().forEach((action) -> {
-			action.doSomeThing(1);
-		});
-		System.out.println("并行流耗时: " + start.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
+        ForkJoinPool forkJoinPool = new ForkJoinPool(10);
+        int          len          = 5000;
+        Task[]       arr          = new Task[len];
+        for (int i = 0; i < len; i++) {
+            arr[i] = (t) -> {
+                try {
+                    Thread.sleep(t);
+                } catch (InterruptedException e) {
+                }
+                return t;
+            };
+        }
+
+        Stopwatch             started = Stopwatch.createStarted();
+        ForkJoinTask<Integer> submit  = forkJoinPool.submit(new AddTask(arr, 0, arr.length - 1));
+
+        forkJoinPool.submit(new AddTask(arr, 0, arr.length - 1));
+
+        submit.get();
+        System.out.println("并发耗时:   " + started.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
+
+        Stopwatch start = started.reset().start();
+        for (Task task : arr) {
+            task.doSomeThing(1);
+        }
+
+        System.out.println("串行耗时:   " + start.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
+
+
+        start = started.reset().start();
+        Arrays.stream(arr).parallel().forEach((action) -> {
+            action.doSomeThing(1);
+        });
+        System.out.println("并行流耗时: " + start.elapsed(TimeUnit.MILLISECONDS) + " 毫秒");
 
 
 并发耗时:   1311 毫秒
@@ -95,35 +88,29 @@ ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并
 
 ```
 
-# 几种并发模型
+## 1.几种并发模型
 
-## 裸线程模型
+### 1.1.裸线程模型
+
 自己创建线程，实现了异步，将主线程与异步任务在执行方式上解耦
 
-## JDK Executors
+### 1.2.JDK Executors
+
 线程的规划，例如线程池，执行调度，结果获取，异常处理都交由一个成熟稳定的框架来管理，这样实现了在算法上的解耦，我们不关注线程框架内部细节，只管提供任务给它就行了
 
-## Forkjoin 分治策略
+### 1.3.Forkjoin 分治策略
+
 目的是划分细粒度线程，划分任务边界，避免锁竞争，通过线程独占任务队列减少锁竞争，实现了并发任务执行空间上的解耦
 
+### 1.4.Actor 基于事件模型的并发
 
-## Actor 基于事件模型的并发
 异步消息概念，基于事件模型的并发，但它的内部实现也是基于ForkJoin的，但是Actor的优点是支持基于RMI的分布式并发，这在分布式并发计算场景非常实用，例如Spark的分布式计算就是实用该模型，当然Actor模型在ForkJoin中存在的问题有着更严重的体现，由于是基于消息对时空解耦，这在调试，问题排查上就会比较困难，而且需要保证避免全局变量与锁竞争
 
+## 2.ForkJoin 实现原理
 
+### 2.1.工作队列
 
-# ForkJoin 实现原理
+### 2.2.Fork
 
-## 工作队列
-
-
-## Fork
-
-
-## Join
-
-
-
-
-
+### 2.3.Join
 
