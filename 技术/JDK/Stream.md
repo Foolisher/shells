@@ -101,6 +101,7 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
             if (cols.length == 3 && !isNullOrEmpty(cols[2]))
                 rows.add(rawRow.split(","));
         }
+        // line => line.split(",")
 
         // 2. 按地区分组
         Map<String, List<String[]>> byAddr = new HashMap<>();
@@ -112,6 +113,7 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
             }
             rows1.add(row);
         }
+        // groupBy(addr): (map, line) => map.add(line::addr, line)
 
         // 3. 按分组聚合每组数据
         Map<String, Double> avg = new HashMap<>();
@@ -124,6 +126,8 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
             ageAve = ageSum / rows2.size();
             avg.put(addr, ageAve);
         }
+        // map,row => map.put(addr, (age1+age2, num++))
+        // map: (addr,[sum,num]) => (addr, sum/num)
 
 
  // B. Java8 Stream实现版
@@ -136,6 +140,7 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
                 .map(l -> l.split(","))
                 .filter(l -> l.length == 3 && !isNullOrEmpty(l[2]))
                 .collect(Collectors.groupingBy(line -> line[2], Collectors.averagingInt(o -> Integer.parseInt(o[1]))));
+
 >> {hz=23.0, newyork=28.0, beijing=24.5}
 
  // C. scala 版本
