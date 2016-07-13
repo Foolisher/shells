@@ -14,22 +14,11 @@ java7开始提供的forkjoin并发模型是一种任务分解并发执行模型�
 
 ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并发模型的设计初衷就是为了划分任务边界，减少锁竞争，若我们再在任务里面加入一些资源锁，那样有造成死锁的风险，当然只是有可能，这就需要开发者自己把握了。
 
-
-
 ![](http://fuxiao.oss-cn-shanghai.aliyuncs.com/book/Forkjoin.png)
-
-
 
 ## 实践编程
 
-1. ddd
-
-2. dd
-3. dd
-4. 
-
 ```java
-
 
         class AddTask extends RecursiveTask<Integer> {
 
@@ -104,6 +93,18 @@ ForkJoin并发模式应当尽量避免在任务里面有锁竞争，鉴于该并
 并行流耗时: 1525 毫秒
 
 ```
+
+### Fork\/Join框架的异常处理
+
+ForkJoinTask在执行的时候可能会抛出异常，但是我们没办法在主线程里直接捕获异常，所以ForkJoinTask提供了isCompletedAbnormally\(\)方法来检查任务是否已经抛出异常或已经被取消了，并且可以通过ForkJoinTask的getException方法获取异常。使用如下代码：
+
+```
+if(task.isCompletedAbnormally()){
+    System.out.println(task.getException());
+}
+```
+
+getException方法返回Throwable对象，如果任务被取消了则返回CancellationException。如果任务没有完成或者没有抛出异常则返回null。
 
 ## 1.几种并发模型
 
