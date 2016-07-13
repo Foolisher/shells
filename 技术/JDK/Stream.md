@@ -83,7 +83,7 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
  // 需求: 对一个地址表中求每个地区的平均年龄
  // SELECT AVG(age),address
  //   FROM user_infos
-//  WHERE address != ''
+ //  WHERE address != ''
  // GROUP BY address
 
  // A. Java6/7 实现
@@ -136,7 +136,7 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
                 .map(l -> l.split(","))
                 .filter(l -> l.length == 3 && !isNullOrEmpty(l[2]))
                 .collect(Collectors.groupingBy(line -> line[2], Collectors.averagingInt(o -> Integer.parseInt(o[1]))));
-
+>> {hz=23.0, newyork=28.0, beijing=24.5}
 
  // C. scala 版本
  val rst = Seq(
