@@ -78,7 +78,7 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
 
 ### 案例1
 
-```
+```java
 
  // 需求: 对一个地址表中求每个地区的平均年龄
  // SELECT AVG(age),address
