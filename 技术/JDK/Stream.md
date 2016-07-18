@@ -64,7 +64,9 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
   filter                       // 数据过滤，如: (v) => notEmpty(v)
   distinct                     // 数据去重 
   sorted                       // 排序
-  peek、 limit、 skip、 parallel、 sequential、 unordered
+  peek、 limit、 skip、 
+  parallel                     // 开始并发模式
+  sequential、 unordered
   ```
 
 * **Terminal**:
