@@ -72,7 +72,10 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
 * **Terminal**:
 
   ```java
-  forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator
+  forEach/forEachOrdered       // 对结果进行迭代，一般用于结果集进行处理货仅仅访问
+  toArray                      // 将结果集转换为数组
+  reduce                       // 聚合结果集，例如求和
+  collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator
   ```
 
 * **Short-circuiting**:
