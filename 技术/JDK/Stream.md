@@ -76,7 +76,7 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
   toArray                      // 将结果集转换为数组
   reduce                       // 聚合结果集，例如求和
   collect                      // 当期望对数据集进行按自定义方式收集起来，例如分组，求均值等
-  min、 max、 count、          //  求值
+  min、 max、 count、          //  数学运算类求值
   anyMatch、 allMatch、 noneMatch  // 检验类api
   findFirst、 findAny、 iterator   // 对结果集访问
   ```
