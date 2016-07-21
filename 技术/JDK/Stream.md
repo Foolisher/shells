@@ -98,7 +98,6 @@ Stream分为动作类api和聚集类api，动作类api是对数据上定义的�
  //  WHERE address != ''
  // GROUP BY address
 
-
  // A. Java6/7 实现
         List<String> rawRows = new ArrayList<>();
         rawRows.add("lee,23,hz");
