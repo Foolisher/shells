@@ -26,7 +26,7 @@ Map\/Reduce模型我们已经知道这是在Hadoop中应用的一个并行大数
 
 1\) 从array或list创建stream：
 
-```
+```java
 Stream<Integer> integerStream = Stream.of(10, 20, 30, 40);
 String[] cityArr = {"Beijing", "Shanghai", "Chengdu"};
 Stream<String> cityStream = Stream.of(cityArr);
@@ -37,7 +37,7 @@ Stream<String> emptyStream = Stream.empty();
 
 2\) 通过`generate`和`iterate`创建无穷stream：
 
-```
+```java
 Stream<String> echos = Stream.generate(() -> "echo");
 Stream<Integer> integers = Stream.iterate(0, num -> num + 1);
 // 创建无穷流必须制定limit
@@ -45,7 +45,7 @@ Stream<Integer> integers = Stream.iterate(0, num -> num + 1);
 
 3\) 通过其它API创建stream：
 
-```
+```java
 Stream<String> lines = Files.lines(Paths.get("test.txt"))
 String content = "AXDBDGXC";
 Stream<String> contentStream = Pattern.compile("[ABC]{1,3}").splitAsStream(content);
