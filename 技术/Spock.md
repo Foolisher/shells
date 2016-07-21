@@ -4,9 +4,7 @@ Spock是一个基于Java与Groovy语言的测试框架，借助于Groovy优雅�
 
 ## 单元测试
 
-###   TDD
-
-### 
+### TDD
 
 ## 什么是Spock
 
