@@ -27,7 +27,9 @@ a.v    b.v
 
 ```
 
-## left outer\[semi\] join
+## left outer\[semi\] join 
+
+
 
 ## right outer\[semi\] join
 
