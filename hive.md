@@ -62,9 +62,31 @@ null 3
 ## union
 
 ```
+select * from A
+union 
+select * from B
 
-
+>>>
+1
+2
+3
+4
 ```
 
 ## union all
+
+```
+select * from A
+union all
+select * from B
+1
+2
+4
+1
+3
+4
+4
+```
+
+
 
