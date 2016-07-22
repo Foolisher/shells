@@ -2,6 +2,31 @@
 
 ## join
 
+```
+
+Table A
+1
+2
+4
+
+Table B
+1
+3
+4
+4
+
+select * from A a
+join B b on a.v = b.v
+>>>
+a.v    b.v
+1      1
+4      4
+4      4
+
+```
+
+
+
 ## left outer\[semi\] join
 
 ## right outer\[semi\] join
