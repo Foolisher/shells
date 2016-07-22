@@ -28,7 +28,11 @@ a.v    b.v
 ```
 
 ## left outer\[semi\] join 
+```
+select * from A a left join B b on a.v=b.v
+>>>
 
+```
 
 
 ## right outer\[semi\] join
