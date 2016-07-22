@@ -34,6 +34,9 @@ a.v    b.v
 ## left outer\[semi\] join
 
 ```
+-- 始终以左边表为参照，去找右边匹配的记录，即使找不到，左边表记录依然存在
+-- 只是右表的字段会为Null
+
 select * from A a left join B b on a.v=b.v
 >>>
 1    1
