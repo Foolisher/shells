@@ -27,13 +27,17 @@ a.v    b.v
 
 ```
 
-## left outer\[semi\] join 
+## left outer\[semi\] join
+
 ```
 select * from A a left join B b on a.v=b.v
 >>>
+1    1
+2    null
+4    4
+4    4
 
 ```
-
 
 ## right outer\[semi\] join
 
