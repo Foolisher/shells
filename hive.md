@@ -15,8 +15,8 @@ Table B
 
 ## join
 
-
-select \* from A a
+```
+select * from A a
 join B b on a.v = b.v
 
 > > &gt;
