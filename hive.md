@@ -73,6 +73,10 @@ null 3
 ## union
 
 ```
+
+-- union 会对两表的结果进行排序，去重，若在需要去重的场景可以用union
+-- 数据库引擎是希望把它们当做一个表的结果来处理
+
 select * from A
 union 
 select * from B
@@ -87,6 +91,8 @@ select * from B
 ## union all
 
 ```
+-- union all只是简单的结果拼接，不把他们当做一个表来处理
+
 select * from A
 union all
 select * from B
