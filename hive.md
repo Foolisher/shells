@@ -40,6 +40,7 @@ select * from A a left join B b on a.v=b.v
 ```
 
 ## right outer\[semi\] join
+
 ```
 1    1
 null 3
@@ -48,6 +49,7 @@ null 3
 ```
 
 ## full outer join
+
 ```
 1    1
 2    null
@@ -56,6 +58,21 @@ null 3
 4    4
 
 ```
+
+
+
+## union
+
+
+
+## union all
+
+
+
+
+
+
+
 
 
 
