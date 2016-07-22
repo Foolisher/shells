@@ -1,6 +1,8 @@
 # 连接方式
 
 ```
+表数据示例
+
 Table A 
 1 
 2 
@@ -16,6 +18,8 @@ Table B
 ## join
 
 ```
+-- 普通join会判断连边条件都符合的记录
+
 select * from A a
 join B b on a.v = b.v
 
@@ -87,6 +91,4 @@ select * from B
 4
 4
 ```
-
-
 
