@@ -49,6 +49,8 @@ select * from A a left join B b on a.v=b.v
 ## right outer\[semi\] join
 
 ```
+-- 与 left join 类似，只是它以右表为参照表，对右表记录保全
+
 1    1
 null 3
 4    4
@@ -58,6 +60,8 @@ null 3
 ## full outer join
 
 ```
+-- 从效果上来说，他是左连接+右连接后union all的结果
+
 1    1
 2    null
 null 3
