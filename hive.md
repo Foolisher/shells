@@ -25,7 +25,7 @@ join B b on a.v = b.v
 > > 4      4
 > > 4      4
 
-\`\`\`
+```
 
 ## left outer\[semi\] join
 
