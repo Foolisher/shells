@@ -19,11 +19,11 @@ Table B
 select * from A a
 join B b on a.v = b.v
 
-> > &gt;
-> > a.v    b.v
-> > 1      1
-> > 4      4
-> > 4      4
+>>>
+a.v    b.v
+1      1
+4      4
+4      4
 
 ```
 
