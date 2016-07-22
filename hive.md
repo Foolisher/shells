@@ -1,6 +1,6 @@
-## left outer join
+## left outer\[semi\] join
 
-## right outer join
+## right outer\[semi\] join
 
 ## full outer join
 
