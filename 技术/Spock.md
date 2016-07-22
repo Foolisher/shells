@@ -67,6 +67,7 @@ Spock是一个基于Java与Groovy语言的测试框架，借助于Groovy优雅�
 **Spock 版本**
 
 ```groovy
+
 /**
  * 数据集规则测试用例
  * Created by wanggen/付笑 on 2016-06-15.
