@@ -40,6 +40,7 @@
 * [JVM](JVM/README.md)
     * [ClassLoader](JVM/ClassLoader.md)
     * [Class](JVM/Class.md)
+    * [GC](JVM/GC.md)
 * 开发中的常见问题
     * [代码可读性](开发中常见问题/代码可读性.md)
     * [让程序可控](开发中常见问题/让程序可控.md)
