@@ -61,7 +61,7 @@
         * [基础理论](技术/React/基础理论.md)
 * [架构与设计](架构与设计.md)
     * [项目结构设计原则](架构与设计/项目结构设计原则.md)
-* [HIVE](hive.md)
+* [HIVE\/ODPS](hive.md)
     * [SQL](HIVE/SQL.md)
     * [连接方式](HIVE/连接方式.md)
 * [创业](创业.md)
