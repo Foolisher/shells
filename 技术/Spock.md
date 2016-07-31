@@ -8,8 +8,7 @@ Spock是一个基于Java与Groovy语言的测试框架，借助于Groovy优雅�
 
 ## JUnit {#d}
 
-## Spock VS JUnit+Mock
-
+## Spock VS JUnit+JMockit
 
 ## 实践
 
