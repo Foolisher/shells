@@ -42,7 +42,7 @@
 
 ![](http://fuxiao.oss-cn-shanghai.aliyuncs.com/book/test-framework.png)
 
-
+Java coder无人不知JUnit，但它只是个测试环境，提供了一些断言工具，而且在测试功能上较TestNG弱些，例如对一个方法多条件输入情况下，JUnit只能一次次执行，而TestNG可以通过配置多多次输入进行配置并对结果断言；
 
 ## Spock
 
