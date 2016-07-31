@@ -48,6 +48,8 @@ Java coder无人不知JUnit，但它只是个测试环境，提供了一些断�
 
 但即使用到JMockit也有许多问题，例如JUnit+Mock方式，对于同一方法多条件输入的校验会设置多次参数并执行多次，代码大量增长，当然可以通过TestNG来实现配置化多参输入，但对它的XML配置方式来做个人觉得更繁琐，而且目前那些mock框架的断言都是doReturn\(userInfo\).when\(userDao\).getUserInfo\(anyLong\(\)\);这样的模式，可读性很差，代码量大，本身java就是一个啰嗦的语言，测试过程中没有明确的划分预知条件、执行环境、期望结果等阶段，若代码可读性不是很好的话看起来会很乱
 
+那么接下来安利一个炫酷的单测框架 **Spock** ：
+
 ## Spock
 
 Spock是一个基于Java与Groovy语言的测试框架，借助于Groovy优雅的表达式语言与独具一格的测试模式使它脱颖而出，当然他的发展也是站在JUnit、JMock、Groovy等巨人的肩膀上的
