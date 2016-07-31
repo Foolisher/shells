@@ -50,9 +50,11 @@ Java coder无人不知JUnit，但它只是个测试环境，提供了一些断�
 
 那么接下来安利一个炫酷的单测框架 **Spock** ：
 
+因为，它可以运行在JUnit上，拥有TestNG的参数化测试特性，却没有它那么繁琐；它能做到其他任何java mock框架能做到的mock，而且借助groovy的预发特性更加简洁干练；对代码质量，对测试用例编写效率，对代码有洁癖最求的你值得拥有
+
 Spock is a testing and specification framework for Java and Groovy applications. What makes it stand out from the crowd is its beautiful and highly expressive specification language. Thanks to its JUnit runner, Spock is compatible with most IDEs, build tools, and continuous integration servers. Spock is inspired from JUnit, jMock, RSpec, Groovy, Scala, Vulcans, and other fascinating life forms.
 
-Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测试框架，
+Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测试框架，规格这个名词来源于一种编程思想，它认为程序在流程阶段上是可描述的，例如对前置条件的设定描述，对执行流程的描述，对预期结果的描述，所以Spock
 
 ## Spock
 
