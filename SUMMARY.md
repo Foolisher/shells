@@ -1,6 +1,10 @@
 # Summary
 
 * [Introduction](README.md)
+* 开发中的常见问题
+    * [代码可读性](开发中常见问题/代码可读性.md)
+    * [让程序可控](开发中常见问题/让程序可控.md)
+    * 日志
 * [面向对象](面向对象.md)
     * [Class](Class.md)
 * [并发](并发.md)
@@ -37,10 +41,6 @@
     * [IOC](Spring/IOC.md)
     * [SpringMVC](Spring/SpringMVC.md)
     * [Bean](Spring/Bean.md)
-* [JVM](JVM/README.md)
-    * [ClassLoader](JVM/ClassLoader.md)
-    * [Class](JVM/Class.md)
-    * [GC](JVM/GC.md)
 * 开发中的常见问题
     * [代码可读性](开发中常见问题/代码可读性.md)
     * [让程序可控](开发中常见问题/让程序可控.md)
