@@ -68,12 +68,12 @@ Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测
 
 ```
 expect:
-Math.max(a, b) == c
+ Math.max(a, b) == c
 where:
-a | b | c
-1 | 3 | 3 //passes
-7 | 4 | 4 //fails
-0 | 0 | 0 //passes
+ a | b | c
+ 1 | 3 | 3 //passes
+ 7 | 4 | 4 //fails
+ 0 | 0 | 0 //passes
 ```
 
 #### 数据管道
