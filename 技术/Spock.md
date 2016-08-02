@@ -63,8 +63,14 @@ Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测
 下面将对使用Spock的各种其他的测试姿势进行介绍：
 
 #### 数据表格
+
 适用于边界测试，对同一个方法的不同输入进行测试，并能对其结果断言
 
+```
+
+
+
+```
 
 #### 数据管道
 
@@ -77,7 +83,6 @@ Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测
 cleanup: //optional
   where: //optional:provide parametrized data (tables or pipes)
 ```
-
 
 ### 添加依赖
 
@@ -120,5 +125,4 @@ cleanup: //optional
             </dependency>
 
 ```
-
 
