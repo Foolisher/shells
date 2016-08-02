@@ -220,8 +220,9 @@ cleanup: //optional
 以上示例只是对Spock的简单介绍，更详细的文档可以参考Spock官网
 
 References:
-[http:\/\/www.atatech.org\/articles\/55655](http://www.atatech.org/articles/55655)
 
+
+[http:\/\/www.atatech.org\/articles\/55655](http://www.atatech.org/articles/55655)
 
 [http:\/\/spockframework.github.io\/spock\/docs\/1.1-rc-1\/index.html](http://spockframework.github.io/spock/docs/1.1-rc-1/index.html)
 
