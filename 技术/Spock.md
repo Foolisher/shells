@@ -78,11 +78,11 @@ Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测
 
 #### expect
 
-    相当于JUnit里面的断言，这里是我们单测期望的结果，
+相当于JUnit里面的断言，这里是我们单测期望的结果，
 
-    ### 添加依赖
+### 添加依赖
 
-    ```xml
+```xml
 
             <!-- Spock Framework basic dependencies: -->
             <dependency>
