@@ -90,6 +90,18 @@ c << [5, 7, 0]
 
 #### 调用次数预测
 
+我们经常会对测试流程中涉及的某些重要方法调用次数进行验证，验证是否调用过，或调用次数是否是自己预期的，被调用的参数是否符合当前场景等
+
+```
+
+1 * subscriber.receive("hello") // exactly one call
+0 * subscriber.receive("hello") // zero calls
+(1..3) * subscriber.receive("hello") // between one and three calls (inclusive)
+(1.._) * subscriber.receive("hello") // at least one call
+(_..3) * subscriber.receive("hello") // at most three calls
+_ * subscriber.receive("hello") // any number of calls, including zero
+```
+
 ### DSL
 
 ```groovy
