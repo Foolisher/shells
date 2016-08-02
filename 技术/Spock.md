@@ -127,7 +127,7 @@ class DataCollectionRuleServiceImplTest extends Specification {
 
 下面将对使用Spock的各种其他的测试姿势进行介绍：
 
-#### 数据表格
+#### 数据表格化的参数
 
 适用于边界测试，对同一个方法的不同输入进行测试，并能对其结果断言
 
