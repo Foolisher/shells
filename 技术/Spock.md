@@ -76,56 +76,45 @@ Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测
 
 ### DSL
 
-```
-
-```
-
-
-
-#### expect
-
-相当于JUnit里面的断言，这里是我们单测期望的结果，
-
 ### 添加依赖
 
 ```xml
-        <!-- Spock Framework basic dependencies: -->
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>2.4.3</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- The version have to be compatible with Groovy -->
-        <dependency>
-            <groupId>org.spockframework</groupId>
-            <artifactId>spock-core</artifactId>
-            <version>1.0-groovy-2.4</version>
-            <scope>test</scope>
-        </dependency>
+            <!-- Spock Framework basic dependencies: -->
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>2.4.3</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- The version have to be compatible with Groovy -->
+            <dependency>
+                <groupId>org.spockframework</groupId>
+                <artifactId>spock-core</artifactId>
+                <version>1.0-groovy-2.4</version>
+                <scope>test</scope>
+            </dependency>
 
-        <!--To use Hamcrest matchers:-->
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
-            <version>1.3</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- To mock classes: -->
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib-nodep</artifactId>
-            <version>3.1</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- Use with cglib to mock classes without default constructor: -->
-        <dependency>
-            <groupId>org.objenesis</groupId>
-            <artifactId>objenesis</artifactId>
-            <version>2.1</version>
-            <scope>test</scope>
-        </dependency>
-```
+            <!--To use Hamcrest matchers:-->
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-core</artifactId>
+                <version>1.3</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- To mock classes: -->
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib-nodep</artifactId>
+                <version>3.1</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- Use with cglib to mock classes without default constructor: -->
+            <dependency>
+                <groupId>org.objenesis</groupId>
+                <artifactId>objenesis</artifactId>
+                <version>2.1</version>
+                <scope>test</scope>
+            </dependency>
 
 ### 实例
 
