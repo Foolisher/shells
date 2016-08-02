@@ -72,15 +72,15 @@ Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测
 ### DSL
 ```groovy
 
- given: //data initialization goes here (includes creating mocks)
+  given: //data initialization goes here (includes creating mocks)
 
- when: //invoke your test subject here and assign it to a variable
+   when: //invoke your test subject here and assign it to a variable
 
- then: //assert data here
+   then: //assert data here
 
 cleanup: //optional
 
- where: //optional:provide parametrized data (tables or pipes)
+  where: //optional:provide parametrized data (tables or pipes)
 
 ```
 
