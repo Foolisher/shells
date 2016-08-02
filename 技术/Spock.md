@@ -98,10 +98,10 @@ class DataCollectionRuleServiceImplTest extends Specification {
  dataCollectionRuleDAO.getListByCondition(_) >> { param -> 
   // 若用户输入数据集id==1, 规则id=="1" 就模拟数据库中存在该条记录,表示数据 
   // 重复,不可再绑定的业务逻辑 
- if (param[0].getCollectionId() == 1l && param[0].getRuleId() == "1") 
-   Lists.newArrayList(collRule); 
- else 
-    Lists.newArrayList(); 
+   if (param[0].getCollectionId() == 1l && param[0].getRuleId() == "1") 
+     Lists.newArrayList(collRule); 
+   else 
+     Lists.newArrayList(); 
  } 
 
  // 执行我们需要测试的服务逻辑 
