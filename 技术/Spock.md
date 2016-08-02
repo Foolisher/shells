@@ -66,7 +66,7 @@ Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测
 
 适用于边界测试，对同一个方法的不同输入进行测试，并能对其结果断言
 
-```
+```groovy
 expect:
  Math.max(a, b) == c
 where:
@@ -80,7 +80,7 @@ where:
 
 有点类似yeild功能，它是表格数据迭代存取的另一种方式，对管道数据用一次，将会跳到下一个值，它对多场景输入提供了便利，它较至于表格模式的灵活性在于它可以让输入参数是可动态获取的\(来自于数据库、文件、网络...\)，而不是写死的
 
-```
+```groovy
 // 这样定义管道数据时，用到a/b/c参数的测试方法将被调用3此，并且结果一次是列表中的顺序值
 where:
 a << [3, 7, 0]
@@ -92,8 +92,7 @@ c << [5, 7, 0]
 
 我们经常会对测试流程中涉及的某些重要方法调用次数进行验证，验证是否调用过，或调用次数是否是自己预期的，被调用的参数是否符合当前场景等
 
-```
-
+```groovy
 1 * subscriber.receive("hello") // exactly one call
 0 * subscriber.receive("hello") // zero calls
 (1..3) * subscriber.receive("hello") // between one and three calls (inclusive)
