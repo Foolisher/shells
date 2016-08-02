@@ -107,7 +107,8 @@ class DataCollectionRuleServiceImplTest extends Specification {
  // 执行我们需要测试的服务逻辑 
  def rst1 = ruleService.bindRule(collRule)
 
- then: // 对返回结果进行断言 rst1.message == msg rst1.success == success
+ then: // 对返回结果进行断言 
+ rst1.message == msg rst1.success == success
 
  where: // 针对任意的输入边界进行测试,对不同的输入/删除进行预测,看输出在设定的输入下是否符合预期结果 collectionId | ruleId | dataType | dataSrc | success | msg null | "1" | 1 | 1 | false | 'collection.id.null' 1 | null | 1 | 1 | false | 'rule.id.null' 1 | "2" | -1 | 1 | false | 'error.dataType' 1 | "1" | 1 | 1 | false | '重复的数据集和规则' 1 | "2" | 1 | 1 | true | null
 
