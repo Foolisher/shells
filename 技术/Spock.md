@@ -60,19 +60,52 @@ Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测
 
 ```groovy
 
-import spock.lang.Specificationimport spock.lang.Unroll
-
-/** * 数据集规则绑定测试用例 * 测试需求: * 1. 验证数据集不能为空 * 2. 验证规则id不能为空 * 3. 数据类型不能为空且数据合法 * 4. 数据来源不能为空且数据需合法 * 5. 为避免重复bind,需校验是否重复绑定,然后给出提示 * 6. 对正常数据进行测试,并且保证是正确的 * Created by 付笑 on 2016-06-15. */
+import spock.lang.Specification
+import spock.lang.Unroll
+/** 
+  * 数据集规则绑定测试用例 
+  * 测试需求: 
+  * 1. 验证数据集不能为空 
+  * 2. 验证规则id不能为空 
+  * 3. 数据类型不能为空且数据合法 
+  * 4. 数据来源不能为空且数据需合法 
+  * 5. 为避免重复bind,需校验是否重复绑定,然后给出提示 
+  * 6. 对正常数据进行测试,并且保证是正确的 
+  * Created by 付笑 on 2016-06-15. 
+  */
 
 class DataCollectionRuleServiceImplTest extends Specification {
 
- // service 服务中用到的 Dao,因为依赖接口,所以需要对其mock,并对方法进行mock def dataCollectionRuleDAO = Mock(TdeDataCollectionRuleDAO) // 待测试的 Service 服务 def ruleService = new DataCollectionRuleServiceImpl( dataCollectionRuleDAO: dataCollectionRuleDAO)
+ // service 服务中用到的 Dao,因为依赖接口,所以需要对其mock,并对方法进行mock 
+ def dataCollectionRuleDAO = Mock(TdeDataCollectionRuleDAO) 
+// 待测试的 Service 服务 
+ def ruleService = new DataCollectionRuleServiceImpl( dataCollectionRuleDAO: dataCollectionRuleDAO)
 
- // 测试绑定规则服务 @Unroll def "test bindRule"() {
+ // 测试绑定规则服务 
+@Unroll def "test bindRule"() {
 
- given: // 1. 初始化一个输入Entity def collRule = new TdeDataCollectionRuleDO( collectionId: collectionId, // 数据集id required ruleId: ruleId, // 数据规则id required dataType: dataType, // 数据类型 in (1,2,3) dataSrc: dataSrc // 数据来源 in (1,2,3) );
+ given: // 1. 初始化一个输入Entity 
+ def collRule = new TdeDataCollectionRuleDO( 
+           collectionId: collectionId, // 数据集id required 
+           ruleId: ruleId, // 数据规则id required 
+           dataType: dataType, // 数据类型 in (1,2,3) 
+           dataSrc: dataSrc // 数据来源 in (1,2,3) );
 
- when: // 对数据查询接口进行Mock,应为Service中用到了DAO服务,为让流程继续 // 走下去,需要数据链路是通的,并且能按自己的意愿在不同的场景返回不同的结果 // groovy 在lambda表达式的语法下构建一个方法Mock显得如此优雅: dataCollectionRuleDAO.getListByCondition(_) >> { param -> // 若用户输入数据集id==1, 规则id=="1" 就模拟数据库中存在该条记录,表示数据 // 重复,不可再绑定的业务逻辑 if (param[0].getCollectionId() == 1l && param[0].getRuleId() == "1") Lists.newArrayList(collRule); else Lists.newArrayList(); } // 执行我们需要测试的服务逻辑 def rst1 = ruleService.bindRule(collRule)
+ when: 
+  // 对数据查询接口进行Mock,应为Service中用到了DAO服务,为让流程继续 
+  // 走下去,需要数据链路是通的,并且能按自己的意愿在不同的场景返回不同的结果 
+  // groovy 在lambda表达式的语法下构建一个方法Mock显得如此优雅: 
+ dataCollectionRuleDAO.getListByCondition(_) >> { param -> 
+  // 若用户输入数据集id==1, 规则id=="1" 就模拟数据库中存在该条记录,表示数据 
+  // 重复,不可再绑定的业务逻辑 
+ if (param[0].getCollectionId() == 1l && param[0].getRuleId() == "1") 
+   Lists.newArrayList(collRule); 
+ else 
+    Lists.newArrayList(); 
+ } 
+
+ // 执行我们需要测试的服务逻辑 
+ def rst1 = ruleService.bindRule(collRule)
 
  then: // 对返回结果进行断言 rst1.message == msg rst1.success == success
 
