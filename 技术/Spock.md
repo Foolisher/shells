@@ -16,7 +16,7 @@
   > 
   > 在设计合理上，代码可读性上有了一定的保证，才能让接盘的同学容易理解你的代码，可以放心安全的修改你的代码，修改高耦合代码带来的连带问题也是屡见不鲜的
 
-4. 通过日常、预发环境测试，测试成本大，效率低，发现问题迟，修改问题的成本也大，而且那时修改问题的风险也大，重效率上来讲单测会提高我们的效率的！
+4. 通过日常、预发环境测试，测试成本大，效率低，发现问题迟，修改问题的成本也大，而且那时修改问题的风险也大，从效率上来讲单测会提高我们的整体效率的！
 
 
 ## 有效的单元测试
@@ -221,5 +221,7 @@ cleanup: //optional
 
 References:
 [http:\/\/www.atatech.org\/articles\/55655](http://www.atatech.org/articles/55655)
+
+
 [http:\/\/spockframework.github.io\/spock\/docs\/1.1-rc-1\/index.html](http://spockframework.github.io/spock/docs/1.1-rc-1/index.html)
 
