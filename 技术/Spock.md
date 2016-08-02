@@ -56,7 +56,32 @@ Java coder无人不知JUnit，但它只是个测试环境，提供了一些断�
 
 Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测试框架，规格化模型来源于一种编程思想，它认为程序在流程阶段上是可描述的，例如对前置条件的设定描述，对执行流程的描述，对预期结果的描述。Spock之所以能在众多单测开中脱颖而出得益于groovy的漂亮语法与表述性测试用例的编程模式，将执行与预测分离。它依然利用的是JUnit执行器，可平滑地集成到常见主流的IDE中，无缝接入已有的持续集成服务，当然它的成功也脱离不了一些优秀测试框架，测试思想，编程语言提供的灵感
 
-## 实践
+### 实践
+
+```groovy
+
+import spock.lang.Specificationimport spock.lang.Unroll
+
+/** * 数据集规则绑定测试用例 * 测试需求: * 1. 验证数据集不能为空 * 2. 验证规则id不能为空 * 3. 数据类型不能为空且数据合法 * 4. 数据来源不能为空且数据需合法 * 5. 为避免重复bind,需校验是否重复绑定,然后给出提示 * 6. 对正常数据进行测试,并且保证是正确的 * Created by 付笑 on 2016-06-15. */
+
+class DataCollectionRuleServiceImplTest extends Specification {
+
+ // service 服务中用到的 Dao,因为依赖接口,所以需要对其mock,并对方法进行mock def dataCollectionRuleDAO = Mock(TdeDataCollectionRuleDAO) // 待测试的 Service 服务 def ruleService = new DataCollectionRuleServiceImpl( dataCollectionRuleDAO: dataCollectionRuleDAO)
+
+ // 测试绑定规则服务 @Unroll def "test bindRule"() {
+
+ given: // 1. 初始化一个输入Entity def collRule = new TdeDataCollectionRuleDO( collectionId: collectionId, // 数据集id required ruleId: ruleId, // 数据规则id required dataType: dataType, // 数据类型 in (1,2,3) dataSrc: dataSrc // 数据来源 in (1,2,3) );
+
+ when: // 对数据查询接口进行Mock,应为Service中用到了DAO服务,为让流程继续 // 走下去,需要数据链路是通的,并且能按自己的意愿在不同的场景返回不同的结果 // groovy 在lambda表达式的语法下构建一个方法Mock显得如此优雅: dataCollectionRuleDAO.getListByCondition(_) >> { param -> // 若用户输入数据集id==1, 规则id=="1" 就模拟数据库中存在该条记录,表示数据 // 重复,不可再绑定的业务逻辑 if (param[0].getCollectionId() == 1l && param[0].getRuleId() == "1") Lists.newArrayList(collRule); else Lists.newArrayList(); } // 执行我们需要测试的服务逻辑 def rst1 = ruleService.bindRule(collRule)
+
+ then: // 对返回结果进行断言 rst1.message == msg rst1.success == success
+
+ where: // 针对任意的输入边界进行测试,对不同的输入/删除进行预测,看输出在设定的输入下是否符合预期结果 collectionId | ruleId | dataType | dataSrc | success | msg null | "1" | 1 | 1 | false | 'collection.id.null' 1 | null | 1 | 1 | false | 'rule.id.null' 1 | "2" | -1 | 1 | false | 'error.dataType' 1 | "1" | 1 | 1 | false | '重复的数据集和规则' 1 | "2" | 1 | 1 | true | null
+
+ }}
+
+
+```
 
 据以往用java mock框架来写这样规格的测试用例是需要大篇幅代码的，不管是方法Mock，边界测试，断言预测等过程，而且java的代码一旦代码多起来就开始凌乱了。
 
@@ -155,8 +180,6 @@ cleanup: //optional
 以上示例只是对Spock的简单介绍，更详细的文档可以参考Spock官网
 
 参考:
-http://www.atatech.org/articles/55655
-http://spockframework.github.io/spock/docs/1.1-rc-1/index.html
-
-  
+[http:\/\/www.atatech.org\/articles\/55655](http://www.atatech.org/articles/55655)
+[http:\/\/spockframework.github.io\/spock\/docs\/1.1-rc-1\/index.html](http://spockframework.github.io/spock/docs/1.1-rc-1/index.html)
 
