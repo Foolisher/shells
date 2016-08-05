@@ -1,10 +1,9 @@
 # Summary
 
+## 技术
 * [Introduction](README.md)
 * [技术](技术/技术.md)
     * [JavaScript](javascript.md)
-    * [使用Groovy进行单元测试](技术/使用Groovy进行单元测试.md)
-    * [单元测试](技术/单元测试.md)
     * [Spock](技术/Spock.md)
     * [maven常见问题](技术/maven常见问题.md)
     * [MAC开发环境](技术/MAC开发环境.md)
