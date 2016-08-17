@@ -6,7 +6,6 @@
     * 并发
         * [ForkJoin](技术/并发/ForkJoin.md)
     * [JavaScript](javascript.md)
-    * [Spock](技术/Spock.md)
     * [maven常见问题](技术/maven常见问题.md)
     * [MAC开发环境](技术/MAC开发环境.md)
     * [JDK](技术/jdk.md)
@@ -16,6 +15,7 @@
         * [语法](技术/React/语法.md)
         * [基础理论](技术/React/基础理论.md)
     * [CSS](技术/css.md)
+    * [Spock](技术/Spock.md)
 
 -----
 * [架构与设计](架构与设计/readme.md)
