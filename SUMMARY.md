@@ -3,9 +3,9 @@
 ## 技术
 * [Introduction](README.md)
 * [技术](技术/技术.md)
-    * [JavaScript](javascript.md)
     * 并发
         * [ForkJoin](技术/并发/ForkJoin.md)
+    * [JavaScript](javascript.md)
     * [Spock](技术/Spock.md)
     * [maven常见问题](技术/maven常见问题.md)
     * [MAC开发环境](技术/MAC开发环境.md)
