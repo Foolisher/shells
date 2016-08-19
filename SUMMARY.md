@@ -3,7 +3,7 @@
 ## 技术
 * [Introduction](README.md)
 * [技术](技术/技术.md)
-    * 并发
+    * [并发](技术/并发.md)
         * [ForkJoin](技术/并发/ForkJoin.md)
     * [JavaScript](javascript.md)
     * [maven常见问题](技术/maven常见问题.md)
