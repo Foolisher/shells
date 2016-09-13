@@ -33,9 +33,9 @@
     * [Class](Class.md)
 * [并发](并发/README.md)
     * [线程](并发/线程.md)
-* [集合](集合.md)
-    * [HashMap](HashMap.md)
-    * [ConcurrentHashMap](ConcurrentHashMap.md)
+* [集合](集合/README.md)
+    * [HashMap](集合/HashMap.md)
+    * [ConcurrentHashMap](集合/ConcurrentHashMap.md)
 * [计算机网络](计算机网络.md)
     * [传输协议](传输协议.md)
 * 算法
