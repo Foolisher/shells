@@ -10,7 +10,8 @@ checkArgument(p1!=null, "p1 is null");
 checkArgument(p2!=null, "p2 is null");
 ...
 新人发现许多老人也这样搞，那我也这样搞吧
+这样的接口是不易使用的，且让用的人出现错误时很懵比
 ```
 
-2.-
+## 2.-
 
