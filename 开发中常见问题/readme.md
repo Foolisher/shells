@@ -12,3 +12,5 @@ checkArgument(p2!=null, "p2 is null");
 新人发现许多老人也这样搞，那我也这样搞吧
 ```
 
+2.-
+
