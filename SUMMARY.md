@@ -17,6 +17,7 @@
     * [CSS](技术/css.md)
     * [Spock](技术/Spock.md)
 * [JVM](JVM/README.md)
+    * [垃圾回收](JVM/垃圾回收.md)
 
 -----
 * [架构与设计](架构与设计/readme.md)
