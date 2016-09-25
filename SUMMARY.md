@@ -5,7 +5,6 @@
 * [技术](技术/技术.md)
     * [并发](技术/并发.md)
         * [ForkJoin](技术/并发/ForkJoin.md)
-    * [JavaScript](javascript.md)
     * [maven常见问题](技术/maven常见问题.md)
     * [MAC开发环境](技术/MAC开发环境.md)
     * [JDK](技术/jdk.md)
