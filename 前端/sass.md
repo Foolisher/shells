@@ -12,6 +12,10 @@
 
 ## @include 实现复杂模块解耦
 
+```
+@include radius(5px);
+```
+
 ## @mixins 实现函数定义
 
 ## 全局遍历实现全局主题控制
