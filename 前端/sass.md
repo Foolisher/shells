@@ -28,3 +28,9 @@
 
 ## 全局遍历实现全局主题控制
 
+```
+$fontSize: 14px
+$fontFamily: 'Yahei'
+
+```
+
