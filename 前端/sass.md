@@ -31,6 +31,7 @@
 ```
 $fontSize: 14px
 $fontFamily: 'Yahei'
-
+$borderStyle: 1px solid lightgray;
+...
 ```
 
