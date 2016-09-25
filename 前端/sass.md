@@ -18,5 +18,13 @@
 
 ## @mixins 实现函数定义
 
+```
+@mixins raduis($pixels){
+ -o-bordre-radius: $pixels;
+ -moz-border-radius: $pixels;
+ ...
+}
+```
+
 ## 全局遍历实现全局主题控制
 
