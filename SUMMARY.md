@@ -20,6 +20,7 @@
     * [垃圾回收](JVM/垃圾回收.md)
 * [前端](前端/README.md)
     * [sass](前端/sass.md)
+* [设计模式](设计模式/README.md)
 
 -----
 * [架构与设计](架构与设计/readme.md)
@@ -71,8 +72,9 @@
 * [HIVE\/ODPS](hive.md)
     * [SQL](HIVE/SQL.md)
     * [连接方式](HIVE/连接方式.md)
-* 分布式
+* [分布式](分布式/README.md)
     * [一致性](分布式/一致性.md)
+    * [zookeeper](分布式/zookeeper.md)
 * [创业](创业.md)
 * [计划提高](计划提高.md)
 * [Demo](感悟的笔记.md)
