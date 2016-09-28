@@ -12,5 +12,9 @@ border-sizing: border-box 会让盒子的内边距与外边距都无效
 
 ### position ~ static
 
+css元素的默认定位方式，正常定位方式
 
+### position ~ relative
+
+不脱离文档流，相对于前一个元素可偏移，若无偏移，这个定位不表现出什么效果
 
