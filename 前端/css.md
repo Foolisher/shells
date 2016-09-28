@@ -8,6 +8,8 @@
 
 float在文字图片环绕场景是比较经典的用例
 
+但浮动许多时候需要结合clear来调整不希望浮动的元素，得到希望的效果
+
 ### border-sizing
 
 border-sizing: border-box 会让盒子的内边距与外边距都无效
