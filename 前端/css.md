@@ -10,3 +10,7 @@
 
 border-sizing: border-box 会让盒子的内边距与外边距都无效
 
+### position ~ static
+
+
+
