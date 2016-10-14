@@ -26,6 +26,9 @@
     * [编码](Java/编码.md)
 
 -----
+* [并发](并发/README.md)
+    * [线程](并发/线程.md)
+    * [ConcurrentHashMap](集合/ConcurrentHashMap.md)
 * [架构与设计](架构与设计/readme.md)
     * [项目结构设计原则](架构与设计/项目结构设计原则.md)
     * [接口设计的合理性](架构与设计/接口设计的合理性.md)
@@ -39,9 +42,6 @@
     * [webx](开发中常见问题/webx.md)
 * [面向对象](面向对象.md)
     * [Class](Class.md)
-* [并发](并发/README.md)
-    * [线程](并发/线程.md)
-    * [ConcurrentHashMap](集合/ConcurrentHashMap.md)
 * [集合](集合/README.md)
     * [HashMap](集合/HashMap.md)
 * [计算机网络](计算机网络.md)
