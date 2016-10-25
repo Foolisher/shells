@@ -9,9 +9,10 @@
   1. 锁实例方法时，锁住当前实例
 
   2. 锁静态方法，锁的是Class
+
   3. 锁对象，那就是只锁对象了
 
-
+2. Lock ReadWriteLock ReentryLock
 
 ## 是不是线程越多效率越高
 
