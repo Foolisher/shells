@@ -6,15 +6,13 @@
 
 **synchronized** 临界区
 
-1. 1. 锁实例方法时，锁住当前实例
+1. 锁实例方法时，锁住当前实例
 
-  2. 锁静态方法，锁的是Class
+  1. 锁静态方法，锁的是Class
 
-  3. 锁对象，那就是只锁对象了
+  2. 锁对象，那就是只锁对象了
 
-  4. 
-
-    Lock ReadWriteLock ReentryLock
+  3. Lock ReadWriteLock ReentryLock
 
 
 
