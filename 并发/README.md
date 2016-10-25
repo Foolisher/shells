@@ -4,13 +4,14 @@
 
 ## 哪些常见的锁
 
-****synchronized** 临界区**
+**synchronized** 临界区\*\*
 
 1. 锁实例方法时，锁住当前实例
 
 2. 锁静态方法，锁的是Class
 
 3. 锁对象，那就是只锁对象了
+
 
 **Lock ReadWriteLock ReentryLock**
 
