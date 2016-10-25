@@ -4,7 +4,7 @@
 
 ## 哪些常见的锁
 
-**synchronized** 临界区
+****synchronized** 临界区**
 
 1. 锁实例方法时，锁住当前实例
 
@@ -12,7 +12,7 @@
 
 3. 锁对象，那就是只锁对象了
 
-4. Lock ReadWriteLock ReentryLock
+**Lock ReadWriteLock ReentryLock**
 
 > 细粒度的锁控制
 
