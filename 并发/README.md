@@ -13,8 +13,7 @@
   3. 锁对象，那就是只锁对象了
 
 
-
-1. Lock ReadWriteLock ReentryLock
+2. Lock ReadWriteLock ReentryLock
 
 > 细粒度的锁控制
 
