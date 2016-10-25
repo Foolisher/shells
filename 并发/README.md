@@ -8,11 +8,11 @@
 
 1. 锁实例方法时，锁住当前实例
 
-  1. 锁静态方法，锁的是Class
+  锁静态方法，锁的是Class
 
-  2. 锁对象，那就是只锁对象了
+  1. 锁对象，那就是只锁对象了
 
-  3. Lock ReadWriteLock ReentryLock
+  2. Lock ReadWriteLock ReentryLock
 
 
 
