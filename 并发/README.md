@@ -10,9 +10,9 @@
 
 2. 锁静态方法，锁的是Class
 
-  1. 锁对象，那就是只锁对象了
+3. 锁对象，那就是只锁对象了
 
-  2. Lock ReadWriteLock ReentryLock
+  1. Lock ReadWriteLock ReentryLock
 
 
 
