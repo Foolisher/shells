@@ -24,6 +24,7 @@
     * [装饰模式](设计模式/装饰模式.md)
 * [Java](Java/README.md)
     * [编码](Java/编码.md)
+    * [内存](Java/内存.md)
 
 -----
 * [并发](并发/README.md)
