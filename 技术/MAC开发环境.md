@@ -12,7 +12,3 @@
 ### OmniPlan
 
 ### OmniGraffle
-
-<div style="color:green;">
-hello
-</div>
