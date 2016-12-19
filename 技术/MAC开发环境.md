@@ -13,6 +13,6 @@
 
 ### OmniGraffle
 
-<div style="color:green">
+<div style="color:green;">
 hello
 </div>
