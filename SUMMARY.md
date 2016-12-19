@@ -2,6 +2,7 @@
 
 ## 技术
 * [Introduction](README.md)
+    * 敏捷开发之道
 * [技术](技术/技术.md)
     * [并发](技术/并发.md)
         * [ForkJoin](技术/并发/ForkJoin.md)
@@ -26,6 +27,7 @@
     * [编码](Java/编码.md)
     * [内存](Java/内存.md)
 * [Gradle](Gradle/README.md)
+* [敏捷开发之道](敏捷开发之道/README.md)
 
 -----
 * [并发](并发/README.md)
