@@ -26,8 +26,8 @@
 * [Java](Java/README.md)
     * [编码](Java/编码.md)
     * [内存](Java/内存.md)
-* [Gradle](Gradle/README.md)
 * [敏捷开发之道](敏捷开发之道/README.md)
+* [Gradle](Gradle/README.md)
 
 -----
 * [并发](并发/README.md)
