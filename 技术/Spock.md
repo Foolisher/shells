@@ -56,7 +56,7 @@ Spock是运用于Java\/Groovy语言编写的项目中一种规格表述式的测
 
 ### 实践
 
-```groovy
+```java
 import spock.lang.Specification
 import spock.lang.Unroll
 /** 
