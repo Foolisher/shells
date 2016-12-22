@@ -218,7 +218,7 @@ References:
 
 * [http://www.atatech.org/articles/55655](http://www.atatech.org/articles/55655)
 
-* [http:\/\/spockframework.github.io\/spock\/docs\/1.1-rc-1\/index.html](http://spockframework.github.io/spock/docs/1.1-rc-1/index.html)
+* [http://spockframework.github.io/spock/docs\/1.1-rc-1\/index.html](http://spockframework.github.io/spock/docs/1.1-rc-1/index.html)
 
 
 
