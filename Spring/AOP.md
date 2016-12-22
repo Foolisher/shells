@@ -10,23 +10,21 @@
 
 
 ## Aspect
-方面定义，方面里面包含了对植入点，植入逻辑的定义
+方面定义，方面里面包含了对植入点，植入逻辑的定义。Aspect是一个切面的定义，一个切面里面定义了切入方式（PointCut）、切入点的逻辑（Advice）
 
 ## Pointcut
-对方法的匹配，在Spring中一般用表达式表达是表示 `[return type] [class and method name]([args])`
+对方法的匹配，在Spring中一般用表达式表达是表示 `[return type] [class and method name]([args])`，匹配表达式指定了哪些地方会被植入切面逻辑
 
 ## Joinpoint
+具体的逻辑点
 
 ## Advice
 通知，这里就是定义要植入逻辑的地方，植入也按执行时间分为许多种
 
-### BeforeAdivce
-
-### AfterAdivce
-
-### AroundAdvice
-
-### ThrowAdvice
+1. BeforeAdivce
+2. AfterAdivce
+3. Around
+4. ThrowAdvice
 
 
 ## 植入原理
