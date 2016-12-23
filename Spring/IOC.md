@@ -6,9 +6,4 @@
 
 ### ApplicationContext
 
-* [ ] 吃饭
-* [ ] 睡觉
-* [ ] 打豆豆
-
-
 
