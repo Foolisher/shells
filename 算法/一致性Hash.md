@@ -12,9 +12,7 @@ int N = 100
    ring[N+1] = node
    N++
    sort(ring, (a,b)->hash(a)-hash(b))
-```
 
-```py
  def del_node:
    del ring[node]
    N--
