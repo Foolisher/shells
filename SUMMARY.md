@@ -61,8 +61,8 @@
 * 算法
     * [一致性Hash](算法/一致性Hash.md)
 * [Guava](Guava/README.md)
-    * [Cache](Guava/Cache.md)
     * [Base](Guava/Base.md)
+    * [Cache](Guava/Cache.md)
 * [中间件](中间件/中间件.md)
     * [Guava](中间件/guava.md)
     * [hsf](中间件/hsf.md)
