@@ -1,8 +1,3 @@
-<style>
- p {
-  color: #666;
- }
-</style>
 
 # 走近敏捷
 
