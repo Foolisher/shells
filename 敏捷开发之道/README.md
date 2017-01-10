@@ -96,7 +96,7 @@
 
 ### ◎ 依赖注入原则DIP: Dependency-Inversion Principle
 
-
+### ◎ 接口隔离原则ISP: Interface Segregation Principle
 
 
 
