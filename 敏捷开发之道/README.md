@@ -96,7 +96,7 @@
 
 #### 优点
 
-### ◎ 依赖注入原则DIP: Dependency-Inversion Principle
+### ◎ 依赖倒置原则DIP: Dependency-Inversion Principle
 
 高层api不能依赖底层实现，底层实现依赖高层api抽象。
 
