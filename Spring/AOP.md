@@ -24,9 +24,13 @@
 
 1. **BeforeAdivce**
 
-1. **AfterAdivce**
-2. **Around**
-3. **ThrowAdvice**
+2. **AfterAdivce**
+
+3. **Around**
+
+
+
+1. **ThrowAdvice**
 
 ## 植入原理
 
