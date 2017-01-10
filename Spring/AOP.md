@@ -23,9 +23,10 @@
 通知，这里就是定义要植入逻辑的地方，植入也按执行时间分为许多种
 
 1. **BeforeAdivce**
-2. **AfterAdivce**
-3. **Around**
-4. **ThrowAdvice**
+
+1. **AfterAdivce**
+2. **Around**
+3. **ThrowAdvice**
 
 ## 植入原理
 
