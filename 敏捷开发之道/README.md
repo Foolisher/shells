@@ -94,7 +94,9 @@
 
 #### 优点
 
-1. d
+### ◎ 依赖注入原则DIP: Dependency-Inversion Principle
+
+
 
 
 
