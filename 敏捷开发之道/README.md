@@ -96,6 +96,8 @@
 
 ### ◎ 依赖注入原则DIP: Dependency-Inversion Principle
 
+依赖抽象，解耦实现还得通过通过依赖注入工具来实现关联
+
 ### ◎ 接口隔离原则ISP: Interface Segregation Principle
 
 
