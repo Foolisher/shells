@@ -34,6 +34,7 @@
     * [一些技巧](架构与设计/一些技巧.md)
     * [领域设计](架构与设计/领域设计.md)
 * [敏捷开发之道](敏捷开发之道/README.md)
+    * [敏捷开发之实践篇](敏捷开发之道/敏捷开发之实践篇.md)
 * [Spring](Spring/README.md)
     * [AOP](Spring/AOP.md)
     * [事务](Spring/事务.md)
