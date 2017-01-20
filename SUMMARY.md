@@ -33,15 +33,9 @@
     * [分层架构](架构与设计/分层架构.md)
     * [一些技巧](架构与设计/一些技巧.md)
     * [领域设计](架构与设计/领域设计.md)
+* [领域模型&微服务](领域模型&微服务/README.md)
 * [敏捷开发之道](敏捷开发之道/README.md)
     * [敏捷开发之实践篇](敏捷开发之道/敏捷开发之实践篇.md)
-* [Spring](Spring/README.md)
-    * [AOP](Spring/AOP.md)
-    * [事务](Spring/事务.md)
-    * [IOC](Spring/IOC.md)
-    * [SpringMVC](Spring/SpringMVC.md)
-    * [Bean](Spring/Bean.md)
-* [Gradle](Gradle/README.md)
 
 -----
 * [并发](并发/README.md)
