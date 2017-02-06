@@ -19,7 +19,7 @@
   * [Spock](技术/Spock.md)
 * [JVM](JVM/README.md)
   * [垃圾回收](JVM/垃圾回收.md)
-  * [类加载器](JVM/类加载器.md)
+  * [类加载器](JVM/ClassLoader.md)
 * [前端](前端/README.md)
   * [sass](前端/sass.md)
   * [css](前端/css.md)
