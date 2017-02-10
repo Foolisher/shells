@@ -42,6 +42,7 @@
   * [AOP](Spring/AOP.md)
   * [IOC](Spring/IOC.md)
   * [SpringMVC](Spring/SpringMVC.md)
+  * [Bean](Spring/Bean.md)
 
 ---
 
