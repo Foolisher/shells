@@ -39,6 +39,7 @@
 * [敏捷开发之道](敏捷开发之道/README.md)
   * [敏捷开发之实践篇](敏捷开发之道/敏捷开发之实践篇.md)
 * [Spring](Spring/README.md)
+  * [AOP](Spring/AOP.md)
 
 ---
 
