@@ -38,6 +38,13 @@
   * [领域模型&微服务](领域模型&微服务/README.md)
 * [敏捷开发之道](敏捷开发之道/README.md)
   * [敏捷开发之实践篇](敏捷开发之道/敏捷开发之实践篇.md)
+* [Spring](Spring/README.md)
+  * [AOP](Spring/AOP.md)
+  * [IOC](Spring/IOC.md)
+  * [SpringMVC](Spring/SpringMVC.md)
+  * [Bean](Spring/Bean.md)
+  * [issues](Spring/issues/README.md)
+    * [jrebel引起的webapp资源加载问题](Spring/issues/jrebel引起的webapp资源加载问题.md)
 
 ---
 
@@ -50,8 +57,6 @@
   * [让程序可控](开发中常见问题/让程序可控.md)
   * [日志](开发中的常见问题/日志.md)
   * [webx](开发中常见问题/webx.md)
-* [面向对象](面向对象.md)
-  * [Class](Class.md)
 * [集合](集合/README.md)
   * [HashMap](集合/HashMap.md)
 * [计算机网络](计算机网络.md)
