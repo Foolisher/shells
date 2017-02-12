@@ -3,7 +3,6 @@
 ## 技术
 
 * [Introduction](README.md)
-  * 敏捷开发之道
 * [技术](技术/技术.md)
   * [并发](技术/并发.md)
     * [ForkJoin](技术/并发/ForkJoin.md)
@@ -19,7 +18,6 @@
   * [Spock](技术/Spock.md)
 * [JVM](JVM/README.md)
   * [垃圾回收](JVM/垃圾回收.md)
-  * [类加载器](JVM/ClassLoader.md)
 * [前端](前端/README.md)
   * [sass](前端/sass.md)
   * [css](前端/css.md)
@@ -33,17 +31,13 @@
   * [项目结构设计原则](架构与设计/项目结构设计原则.md)
   * [接口设计的合理性](架构与设计/接口设计的合理性.md)
   * [解耦的一些方法](架构与设计/解耦的一些用法.md)
+  * [系统扩展的一些方法](架构与设计/系统扩展的一些方法.md)
   * [分层架构](架构与设计/分层架构.md)
   * [一些技巧](架构与设计/一些技巧.md)
   * [领域设计](架构与设计/领域设计.md)
+  * [领域模型&微服务](领域模型&微服务/README.md)
 * [敏捷开发之道](敏捷开发之道/README.md)
-* [Spring](Spring/README.md)
-  * [AOP](Spring/AOP.md)
-  * [事务](Spring/事务.md)
-  * [IOC](Spring/IOC.md)
-  * [SpringMVC](Spring/SpringMVC.md)
-  * [Bean](Spring/Bean.md)
-* [Gradle](Gradle/README.md)
+  * [敏捷开发之实践篇](敏捷开发之道/敏捷开发之实践篇.md)
 
 ---
 
@@ -65,8 +59,8 @@
 * 算法
   * [一致性Hash](算法/一致性Hash.md)
 * [Guava](Guava/README.md)
-  * [Cache](Guava/Cache.md)
   * [Base](Guava/Base.md)
+  * [Cache](Guava/Cache.md)
 * [中间件](中间件/中间件.md)
   * [Guava](中间件/guava.md)
   * [hsf](中间件/hsf.md)
@@ -78,7 +72,7 @@
   * [Mybatis](中间件/Mybatis.md)
   * [Guice](Guice/Guice.md)
   * [RocketMQ](中间件/RocketMQ.md)
-* [电商](电商/电商.md)
+* [电商](电商/README.md)
   * [商品](电商/商品.md)
   * [类目](电商/类目.md)
   * [交易](交易.md)
