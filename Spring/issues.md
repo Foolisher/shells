@@ -6,7 +6,7 @@
 
 debug发现：
 
-```
+```java
 "RMI TCP Connection(2)-127.0.0.1@2537" daemon prio=5 tid=0x2a nid=NA runnable
   java.lang.Thread.State: RUNNABLE
       at org.springframework.web.context.support.ServletContextResource.<init>(ServletContextResource.java:66)
