@@ -31,3 +31,5 @@ debug发现：
 
 发现ServletContext路径居然是从 src/main/webapp/ 开始的，这就奇怪了，为何不是 target/exploded/mpchoice.war/ 呢，这里才是解开后的路径啊。由于web里面有许多placeholder要在打包阶段替换，若去找工程文件路径的话，那就找不到了，是要找编译后的项目路径才能拿到被注入过变量的文件。那么问题是如何让这里的ServletContext识别正确的rootpath呢？
 
+![](/assets/spring/jrebel-path.png)
+
