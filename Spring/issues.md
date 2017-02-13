@@ -33,3 +33,7 @@ debug发现：
 
 ![](/assets/spring/jrebel-path.png)
 
+这还需从jrebel的原理分析了，启用jrebel后所有的class、包括webapp的资源加载都由jrebel来做，那么对于webapp的web配置，jrebel由于无法知道web资源exploded路径，遂以项目路径作为资源加载路径，告诉ServletContext这就是webapp路径，那么久不对了，该问题的解决办法是修改jrebel里面的 / 路径指向为解压开的路径，包括 /WEB-INF 
+
+
+
