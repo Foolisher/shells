@@ -8,8 +8,13 @@
 Parent Window
 
 var msger = new Messenger('parent');
-msger.addTarget(iframe1.contentWindow, 'iframe1')
+msger.addTarget(iframe1.contentWindow, 'iframe1') // 一定要和 iframe 的名称一致
 msger.targets['iframe1'].send('hello')
+
+Iframe1
+
+var msger = new Messenger('iframe1');
+msger.addTarget(window.parent, 'parent');
 
 
 ```
