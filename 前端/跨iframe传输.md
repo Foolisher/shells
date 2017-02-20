@@ -15,7 +15,9 @@ Iframe1
 
 var msger = new Messenger('iframe1'); 
 msger.addTarget(window.parent, 'parent');  // 一定要和父window的信使名称(如parent)一致
-msg.listen((msg)=> {})
+msg.listen((msg)=> {
+ // msg from parent
+})
 ```
 
 
