@@ -1,4 +1,6 @@
-
-
 ![](/assets/前端/.png)
+
+对于Iframe，必须等待Iframe渲染完成才能发送消息，否则获取到的window是空的，而且也不能发送消息；
+
+一个特别注意的点事addTarget里面的对方名称定义一定要与iframe里面的Messenger的定义一致，否则找不到对象
 
