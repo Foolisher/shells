@@ -48,6 +48,12 @@
   * [Bean](Spring/Bean.md)
   * [issues](Spring/issues/README.md)
     * [jrebel引起的webapp资源加载问题](Spring/issues/jrebel引起的webapp资源加载问题.md)
+* [分布式](分布式/README.md)
+  * [一致性](分布式/一致性.md)
+  * [zookeeper](分布式/zookeeper.md)
+* [Guava](Guava/README.md)
+  * [Base](Guava/Base.md)
+  * [Cache](Guava/Cache.md)
 
 ---
 
@@ -66,9 +72,6 @@
   * [传输协议](传输协议.md)
 * 算法
   * [一致性Hash](算法/一致性Hash.md)
-* [Guava](Guava/README.md)
-  * [Base](Guava/Base.md)
-  * [Cache](Guava/Cache.md)
 * [中间件](中间件/中间件.md)
   * [Guava](中间件/guava.md)
   * [hsf](中间件/hsf.md)
@@ -87,9 +90,6 @@
 * [HIVE\/ODPS](hive.md)
   * [SQL](HIVE/SQL.md)
   * [连接方式](HIVE/连接方式.md)
-* [分布式](分布式/README.md)
-  * [一致性](分布式/一致性.md)
-  * [zookeeper](分布式/zookeeper.md)
 * [创业](创业.md)
 * [Demo](感悟的笔记.md)
 
