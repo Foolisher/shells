@@ -49,6 +49,7 @@
   * [Bean](Spring/Bean.md)
   * [issues](Spring/issues/README.md)
     * [jrebel引起的webapp资源加载问题](Spring/issues/jrebel引起的webapp资源加载问题.md)
+  * [Cache](Spring/cache.md)
 * [分布式](分布式/README.md)
   * [一致性](分布式/一致性.md)
   * [zookeeper](分布式/zookeeper.md)
