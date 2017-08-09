@@ -34,7 +34,7 @@
     * [jrebel引起的webapp资源加载问题](Spring/issues/jrebel引起的webapp资源加载问题.md)
   * [Cache](Spring/cache.md)
 * [HSF](HSF/README.md)
-  * 设计
+  * [设计](HSF/she-ji.md)
 * [Kafka](kafka.md)
   * [设计](kafka/she-ji.md)
 * [架构与设计](架构与设计/readme.md)
