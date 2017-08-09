@@ -26,8 +26,8 @@
 * [Dubbo](Dubbo/README.md)
   * [设计](Dubbo/设计.md)
 * [HSF](HSF/README.md)
-* Kafka
-  * 设计
+* [Kafka](kafka.md)
+  * [设计](kafka/she-ji.md)
 * [架构与设计](架构与设计/readme.md)
   * [项目结构设计原则](架构与设计/项目结构设计原则.md)
   * [接口设计的合理性](架构与设计/接口设计的合理性.md)
