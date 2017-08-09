@@ -26,6 +26,7 @@
 * [Dubbo](Dubbo/README.md)
   * [设计](Dubbo/设计.md)
 * [HSF](HSF/README.md)
+* Kafka
 * [架构与设计](架构与设计/readme.md)
   * [项目结构设计原则](架构与设计/项目结构设计原则.md)
   * [接口设计的合理性](架构与设计/接口设计的合理性.md)
@@ -56,8 +57,7 @@
 * [Guava](Guava/README.md)
   * [Base](Guava/Base.md)
   * [Cache](Guava/Cache.md)
-* [git](git/README.md)
-  * [回滚](git/回滚.md)
+* Kafka
 
 ---
 
