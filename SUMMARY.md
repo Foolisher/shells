@@ -26,6 +26,7 @@
 * [Dubbo](Dubbo/README.md)
   * [设计](Dubbo/设计.md)
 * [HSF](HSF/README.md)
+  * 设计
 * [Kafka](kafka.md)
   * [设计](kafka/she-ji.md)
 * [架构与设计](架构与设计/readme.md)
