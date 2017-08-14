@@ -25,7 +25,7 @@
   * [内存](Java/内存.md)
   * [NIO](Java/nio.md)
   * 并发
-    * ABA问题
+    * [ABA问题](Java/abawen-ti.md)
 * [Dubbo](Dubbo/README.md)
   * [设计](Dubbo/设计.md)
 * [Spring](Spring/README.md)
