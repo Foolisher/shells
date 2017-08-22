@@ -3,8 +3,8 @@
 ### 索引结构
 
 ```yaml
-$field:  # 字段名称
-  $term  # 单词
+$field:   # 字段名称
+  $term:  # 单词
     $freq:$docId^$positions  # 词频倒排序，文档id^在文档中的位置
 
 
