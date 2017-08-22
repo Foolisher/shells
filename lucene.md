@@ -2,12 +2,12 @@
 
 ### 索引结构
 
-```
+```yaml
 field
   $term
     $freq:$docId:$positions
-    
-    
+
+
 title:
   "好吃":
     101:999901:1,8,99,223,
