@@ -5,7 +5,7 @@
 ```yaml
 $field:  # 字段名称
   $term  # 单词
-    $freq:$docId:$positions
+    $freq:$docId^$positions  # 词频倒排序
 
 
 title:
