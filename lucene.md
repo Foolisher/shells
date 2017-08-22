@@ -4,10 +4,9 @@
 
 ```
 field
-  
+  $term
+    $freq:$docId:$posi
 ```
-
-
 
 
 
