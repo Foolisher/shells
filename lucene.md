@@ -5,7 +5,7 @@
 ```
 field
   $term
-    $freq:$docId:$posi
+    $freq:$docId:positions
 ```
 
 
