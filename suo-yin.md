@@ -16,4 +16,4 @@
 
 ## InnoDB VS MyISAM
 
-
+M是无序的，他的顺序就是插入顺序
