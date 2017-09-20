@@ -70,6 +70,8 @@
 * Kafka
 * 搜索引擎
   * [Lucene](lucene.md)
+* 数据库
+  * [索引](suo-yin.md)
 
 ---
 
