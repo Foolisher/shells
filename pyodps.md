@@ -4,6 +4,6 @@
 
 ```python
 
-o.get_table('t1')
+ o.get_table('t1')
 
 ```
