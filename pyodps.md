@@ -3,7 +3,10 @@
 ### 表
 
 ```python
-o.get_table('t1')
+t1 = o.get_table('t1')
+
+t.schema
+
 ```
 
 
