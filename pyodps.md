@@ -2,7 +2,7 @@
 
 ### 表
 
-``` python
+```python
 
 o.get_table('t1')
 
