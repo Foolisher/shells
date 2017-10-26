@@ -56,7 +56,6 @@
   * [控件渲染](技术/React/控件渲染.md)
   * [语法](技术/React/语法.md)
   * [基础理论](技术/React/基础理论.md)
-
 * [分布式](分布式/README.md)
   * [一致性](分布式/一致性.md)
   * [zookeeper](分布式/zookeeper.md)
@@ -68,6 +67,7 @@
   * [Lucene](lucene.md)
 * 数据库
   * [索引](suo-yin.md)
+* [Pyodps](pyodps.md)
 
 ---
 
@@ -107,6 +107,4 @@
   * [连接方式](HIVE/连接方式.md)
 * [创业](创业.md)
 * [Demo](感悟的笔记.md)
-
-
 
