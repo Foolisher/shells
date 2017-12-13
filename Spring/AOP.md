@@ -8,7 +8,7 @@
 
 ## Aspect
 
-方面定义，方面里面包含了对植入点，植入逻辑的定义。Aspect是一个切面的定义，一个切面里面定义了切入方式（PointCut）、切入点的逻辑（Advice）
+方面定义，方面里面包含了对植入点，植入逻辑的定义。Aspect是一个切面的定义，一个切面里面定义了切入点（JoinPoint）、切入方式（PointCut）、切入点的逻辑（Advice）
 
 ## Pointcut
 

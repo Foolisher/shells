@@ -1,6 +1,6 @@
 # Summary
 
-## 技术
+## LEARNING
 
 * [Introduction](README.md)
 * [技术](技术/技术.md)
