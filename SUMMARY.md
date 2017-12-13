@@ -31,7 +31,7 @@
     * [ABA问题](Java/abawen-ti.md)
 * [Dubbo](Dubbo/README.md)
   * [设计](Dubbo/设计.md)
-  * 服务初始化
+  * [服务初始化](Dubbo/fu-wu-chu-shi-hua.md)
   * 服务发布
   * 服务订阅
   * RPC框架
