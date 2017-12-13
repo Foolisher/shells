@@ -27,7 +27,7 @@
   * [编码](Java/编码.md)
   * [内存](Java/内存.md)
   * [NIO](Java/nio.md)
-  * 并发
+  * [并发](Java/bing-fa.md)
     * [ABA问题](Java/abawen-ti.md)
 * [Dubbo](Dubbo/README.md)
   * [设计](Dubbo/设计.md)
