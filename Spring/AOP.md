@@ -10,6 +10,10 @@
 
 方面定义，方面里面包含了对植入点，植入逻辑的定义。Aspect是一个切面的定义，一个切面里面定义了切入点（JoinPoint）、切入方式（PointCut）、切入点的逻辑（Advice）
 
+## Advisor
+
+PointCut和Advice的holder
+
 ## Pointcut
 
 对方法的匹配，在Spring中一般用表达式表达是表示 `[return type] [class and method name]([args])`，匹配表达式指定了哪些地方会被植入切面逻辑
@@ -31,6 +35,24 @@
 4. **ThrowAdvice**
 
 ## 植入原理
+
+1. 初始化BeanDefinition
+2. createBean
+3. initBean
+4. find Advisors
+5. match JoinPoint
+6. create Proxy
+
+### AopUtils
+
+```java
+// 判断 beanClass 是否可以被这个切面代理
+canApply(pointCut, beanClass);
+    MethodMatcher.matches
+    AnnotationMethodMatcher   // 注解标记的解析，有目标注解的
+    AspectJExpressionPointcut // 表达式标记的切面匹配
+
+```
 
 ### 表达式
 

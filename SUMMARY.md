@@ -32,9 +32,10 @@
 * [Dubbo](Dubbo/README.md)
   * [设计](Dubbo/设计.md)
   * [服务初始化](Dubbo/fu-wu-chu-shi-hua.md)
-  * 服务发布
-  * 服务订阅
-  * RPC框架
+  * [服务发布](Dubbo/fu-wu-fa-bu.md)
+  * [服务订阅](Dubbo/fu-wu-ding-yue.md)
+  * [RPC框架](Dubbo/rpckuang-jia.md)
+  * 负载均衡
 * [Spring](Spring/README.md)
   * [AOP](Spring/AOP.md)
   * [IOC](Spring/IOC.md)
