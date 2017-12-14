@@ -23,13 +23,14 @@ sku为特殊渠道预留的库存
 ```yaml
 Item:
     stockNum: 100
-    
+
 ChannelStock:
     itemId: 1
     skuId: 101
     channel: 'ju-sec'
     stockNum: 20
-
+    
+    
 ```
 
 
