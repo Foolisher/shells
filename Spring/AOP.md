@@ -8,11 +8,11 @@
 
 ## Aspect
 
-方面定义，方面里面包含了对植入点，植入逻辑的定义。Aspect是一个切面的定义，一个切面里面定义了切入点（JoinPoint）、切入方式（PointCut）、切入点的逻辑（Advice）
+方面定义，方面里面包含了对植入点，植入逻辑的定义。Aspect是一个切面的定义，一个切面里面定义了切入点（JoinPoint）、切入方式（PointCut）、切入点的逻辑（Advice），一个@Aspect类被解析成一个
 
 ## Advisor
 
-PointCut和Advice的holder
+PointCut和Advice的holder，PointCut是用来组织切面的，Advice是用来在切面上执行动作的，Advice有多种动作方式如前置、后置、前后置处理等方式
 
 ## Pointcut
 
@@ -43,15 +43,25 @@ PointCut和Advice的holder
 5. match JoinPoint
 6. create Proxy
 
+**找到Advisors**
+
+```java
+BeanFactoryAdvisorRetrivelHelper.findAdvisorBeans()
+```
+
+
+
 ### AopUtils
 
 ```java
+// 找到匹配的切面
+findAdvisorsThatCanApply(advisors, target);
+
 // 判断 beanClass 是否可以被这个切面代理
-canApply(pointCut, beanClass);
+AopUtils.canApply(pointCut, beanClass);
     MethodMatcher.matches
     AnnotationMethodMatcher   // 注解标记的解析，有目标注解的
     AspectJExpressionPointcut // 表达式标记的切面匹配
-
 ```
 
 ### 表达式
