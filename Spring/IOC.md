@@ -1,7 +1,3 @@
-{
- "plugins": ['mermaid']
-}
-
 ## Container
 
 ## Aware
