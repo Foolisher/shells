@@ -5,6 +5,9 @@ plugins:
 
 ## Container
 
+```mermaid
+
+```
 {% mermaid %}
 graph TD;
   A-->B;
