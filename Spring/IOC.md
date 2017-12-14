@@ -8,6 +8,7 @@ plugins:
 ```mermaid
 
 ```
+
 {% mermaid %}
 graph TD;
   A-->B;
