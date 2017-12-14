@@ -1,10 +1,7 @@
 ---
 {
- "plugins": ['mermaid ']
+ "plugins": ['mermaid']
 }
-plugins:
-  - mermaid
----
 
 ## Container
 
