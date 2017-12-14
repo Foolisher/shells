@@ -1,13 +1,9 @@
----
+ ---
 plugins:
   - mermaid
 ---
 
 ## Container
-
-```mermaid
-
-```
 
 {% mermaid %}
 graph TD;
