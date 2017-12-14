@@ -1,14 +1,10 @@
 ---
 plugins:
   - mermaid
-  - book-summary-scroll-position-saver
 ---
 
 ## Container
 
-```
-
-```
 
 ## Aware
 
