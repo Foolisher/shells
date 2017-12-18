@@ -35,7 +35,7 @@
   * [服务发布](Dubbo/fu-wu-fa-bu.md)
   * [服务订阅](Dubbo/fu-wu-ding-yue.md)
   * [RPC框架](Dubbo/rpckuang-jia.md)
-  * 负载均衡
+  * [负载均衡](Dubbo/fu-zai-jun-heng.md)
 * [Spring](Spring/README.md)
   * [AOP](Spring/AOP.md)
   * [IOC](Spring/IOC.md)
@@ -78,6 +78,7 @@
   * [交易](交易.md)
   * [渠道库存](电商/qu-dao-ku-cun.md)
   * [优惠库存](电商/you-hui-ku-cun.md)
+  * [秒杀](电商/miao-sha.md)
 * [Pyodps](pyodps.md)
 
 ---
