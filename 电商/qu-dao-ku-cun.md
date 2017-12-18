@@ -10,7 +10,7 @@
 
 ### 渠道库存
 
-> sku为特殊渠道预留的库存
+> sku为特殊渠道预留的库存  \| PC:100 \| WL:300 \| ，PC端看到的库存是100个；无线端看到的库存是300个。
 
 ### 渠道库存扣减
 
@@ -36,7 +36,7 @@ ChannelStock:
     channel: 'ju-sec'
     stockNum: 20  # 渠道库存
     sellNum: 19   # 渠道库存售出量
-    channelPrice: 2000 
+    channelPrice: 2000
 ```
 
 

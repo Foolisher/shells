@@ -72,6 +72,12 @@
   * [Lucene](lucene.md)
 * 数据库
   * [索引](suo-yin.md)
+* [电商](电商/README.md)
+  * [商品](电商/商品.md)
+  * [类目](电商/类目.md)
+  * [交易](交易.md)
+  * [渠道库存](电商/qu-dao-ku-cun.md)
+  * [优惠库存](电商/you-hui-ku-cun.md)
 * [Pyodps](pyodps.md)
 
 ---
@@ -104,12 +110,6 @@
   * [Mybatis](中间件/Mybatis.md)
   * [Guice](Guice/Guice.md)
   * [RocketMQ](中间件/RocketMQ.md)
-* [电商](电商/README.md)
-  * [商品](电商/商品.md)
-  * [类目](电商/类目.md)
-  * [交易](交易.md)
-  * [渠道库存](电商/qu-dao-ku-cun.md)
-  * [优惠库存](电商/you-hui-ku-cun.md)
 * [HIVE\/ODPS](hive.md)
   * [SQL](HIVE/SQL.md)
   * [连接方式](HIVE/连接方式.md)
