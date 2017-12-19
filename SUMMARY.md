@@ -67,7 +67,9 @@
 * [Guava](Guava/README.md)
   * [Base](Guava/Base.md)
   * [Cache](Guava/Cache.md)
-* Kafka
+* 算法
+  * [一致性Hash](算法/一致性Hash.md)
+  * [红黑树VS平衡二叉树](算法/hong-hei-shu-vs-ping-heng-er-cha-shu.md)
 * 搜索引擎
   * [Lucene](lucene.md)
 * 数据库
@@ -97,9 +99,6 @@
   * [HashMap](集合/HashMap.md)
 * [计算机网络](计算机网络.md)
   * [传输协议](传输协议.md)
-* 算法
-  * [一致性Hash](算法/一致性Hash.md)
-  * [红黑树VS平衡二叉树](算法/hong-hei-shu-vs-ping-heng-er-cha-shu.md)
 * [中间件](中间件/中间件.md)
   * [Guava](中间件/guava.md)
   * [hsf](中间件/hsf.md)
