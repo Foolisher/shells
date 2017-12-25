@@ -16,6 +16,7 @@
   * [ForkJoin](技术/并发/ForkJoin.md)
   * [并发原理](并发/并发原理.md)
   * [协程](并发/协程.md)
+  * [笔记](并发/笔记.md)
 * [前端](前端/README.md)
   * [es6新特性](前端/es6xin-te-xing.md)
   * [sass](前端/sass.md)
