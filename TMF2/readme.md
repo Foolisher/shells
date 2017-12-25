@@ -1,6 +1,14 @@
 ## 
 
-> doSomething on Target
+> how to descript Extension:
+>
+> doSomething on Target in the ability Definition
+>
+> --&gt; doSomething\(target\);
+>
+> how to find Extension:
+>
+> --&gt; find ext by bizCode and extCode in pointcut
 
 ![](/assets/tmf-扩展点.png)流程
 
