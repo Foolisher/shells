@@ -1,4 +1,4 @@
 { 
-  "plugins": ["prism", "-highlight", "maxiang", "mermaid"]
+  "plugins": ["-highlight", "maxiang", "mermaid"]
   
 }
