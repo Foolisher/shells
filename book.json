@@ -1,3 +1,4 @@
 { 
-  "plugins":  ["maxiang", "prism", "-highlight"]
+  "plugins":  ["maxiang", "prism", "-highlight", "splitter"]
+  
 }
