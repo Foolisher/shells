@@ -1,4 +1,4 @@
 { 
-  "plugins": ["-highlight", "maxiang", "mermaid"]
+  "plugins":  "maxiang"]
   
 }
