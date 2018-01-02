@@ -50,7 +50,7 @@
   * [Cache](Spring/cache.md)
 * [HSF](HSF/README.md)
   * [设计](HSF/she-ji.md)
-* [Kafka](kafka.md)
+* [Kafka](Kafka/kafka.md)
   * [设计](kafka/she-ji.md)
 * [架构与设计](架构与设计/readme.md)
   * [敏捷开发](架构与设计/min-jie-kai-fa.md)
@@ -90,10 +90,12 @@
   * [优惠库存](电商/you-hui-ku-cun.md)
   * [秒杀](电商/秒杀.md)
   * [优惠玩法](电商/优惠玩法.md)
+  * [导购](电商/导购.md)
 * [编码](编码/readme.md)
 * [读书](读书/readme.md)
 * [TMF2](TMF2/readme.md)
   * [设计](TMF2/设计.md)
+  * [交易](TMF2/交易.md)
 
 ---
 
