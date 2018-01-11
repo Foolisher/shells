@@ -13,8 +13,6 @@
 * 把UserBean包装成被CacheInterceptor代理的
 * 查询用户时，缓存代理先从缓存中查询，如果没有值则先从db中查询并放入缓存，然后返回结果
 
-
-
 ![](/assets/spring/spring-cache-init.png)
 
 ## 注解
@@ -26,6 +24,12 @@
 ### AOP
 
 ### Interceptor
+
+
+
+
+
+
 
 
 
