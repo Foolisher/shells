@@ -1,22 +1,30 @@
 # 一、开发工具
 
-### IDEA
+## IDEA
 
-### iterm
+## iterm
 
 ## 二、效率工具
 
-### Alfred
+## Alfred
 
-### OmniPlan
+## OmniPlan
 
-### OmniGraffle
+## OmniGraffle
 
-### 图床
+## OmniFocus
+
+## 图床
 
 ipic
 
-### Markdown编辑器
+# 三、编辑器
+
+## Markdown编辑器
 
 Typora
+
+gitbook
+
+hexo
 
