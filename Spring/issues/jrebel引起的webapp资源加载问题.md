@@ -27,11 +27,13 @@ debug发现：
       - locked <0x340f> (a java.lang.Object)
 ```
 
-![](/assets/spring/servlet-context.png)
+![](https://ws2.sinaimg.cn/large/006tKfTcgy1fndno5eycgj30qs0hvn4q.jpg)
 
 发现ServletContext路径居然是从 src/main/webapp/ 开始的，这就奇怪了，为何不是 target/exploded/mpchoice.war/ 呢，这里才是解开后的路径啊。由于web里面有许多placeholder要在打包阶段替换，若去找工程文件路径的话，那就找不到了，是要找编译后的项目路径才能拿到被注入过变量的文件。那么问题是如何让这里的ServletContext识别正确的rootpath呢？
 
-![](/assets/spring/jrebel-path.png)
+![](https://ws4.sinaimg.cn/large/006tKfTcgy1fndnop3h4gj31400n9tqm.jpg)
 
 这还需从jrebel的原理分析了，启用jrebel后所有的class、包括webapp的资源加载都由jrebel来做，那么对于webapp的web配置，jrebel由于无法知道web资源exploded路径，遂以项目路径作为资源加载路径，告诉ServletContext这就是webapp路径，那么久不对了，该问题的解决办法是修改jrebel里面的 / 路径指向为解压开的路径，包括 /WEB-INF
+
+
 

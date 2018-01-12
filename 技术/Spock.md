@@ -36,7 +36,7 @@
 
 ## 单元测试选型
 
-![](http://fuxiao.oss-cn-shanghai.aliyuncs.com/book/test-framework.png)
+![](https://ws4.sinaimg.cn/large/006tKfTcgy1fndnqf39xwj30xi0kiq5c.jpg)
 
 前面安利了咱为何需要单测，那么接下来就说说单测的一些利器
 

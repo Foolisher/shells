@@ -3,9 +3,9 @@
 ## LEARNING
 
 * [Introduction](README.md)
+* [MAC开发环境](MAC开发环境.md)
 * [技术](技术/技术.md)
   * [maven常见问题](技术/maven常见问题.md)
-  * [MAC开发环境](技术/MAC开发环境.md)
   * [JDK](技术/jdk.md)
     * [Stream](技术/JDK/Stream.md)
   * [CSS](技术/css.md)
