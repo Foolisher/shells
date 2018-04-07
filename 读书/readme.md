@@ -8,8 +8,6 @@
 
 ![](https://gw.alipayobjects.com/zos/skylark/18f57ae3-76c7-4bb0-b93d-5f0b856ebae6/2018/png/9fbb605d-bb7f-48cd-b4a3-e55359f32cba.png)
 
-
-
 开通后免密支付的效果如下图，提交订单到支付一步到位：
 
 ![](https://gw.alipayobjects.com/zos/skylark/a46c1852-9a65-402c-978e-d8111aa1dcc8/2018/png/b4879627-88ff-4b0a-b806-abb918d16920.png)
@@ -54,8 +52,6 @@
 
 ## 二、怎么渲染免密支付Switch滑块
 
-
-
 ### 2.1. 什么是奥创
 
 我们都已经获知交易的许多页面都是通过奥创平台来配置并渲染的，那么首先需要知道奥创做了些啥，是怎么做的。
@@ -65,8 +61,6 @@
 其实想想这个逻辑其实是雷同的，只是由于不同的端，copy了一份相同的逻辑了，那么这个重复劳动能不能交给一个中间件做呢，它来约定一个基础控件如Input要传哪些参数诸如`{name,visible,editable,validation}`等，由中间件实现这个组件元数据在不同端的渲染逻辑，那么以后任何的Input控件渲染，只需给出这个控件定义即可，后端无需关心前端怎么做，这个中间件（SDK）只需按控件定义渲染即可，是不是有点像JVM，一套代码，处处运行。
 
 这就是MVVM\(Model–view–viewmodel\)思想解决思路：**通过组件元数据约束了前后端组件渲染/交互规范**，加上SDK，实现一套代码（配置），多端通用。约束了组件接口协议、通过SDK渲染控件、通过组件复用提高开发效率。在此基础上，并为页面设计了组件布局，让组件组合起来成为一个完整的页面，这就是奥创。
-
-
 
 ### 2.2. 奥创是怎么渲染控件的
 
@@ -82,9 +76,9 @@
 
 回顾图一可以看出页面数据的布局就是在json的`hierarchy.structure`里面定义的，而这个结构数据又是在上图的结构化管理里面定义的，现在页面布局知道了，控件元数据与控件是怎么对应起来的也知道了，那么控件的元数据又是怎么`set`到`data`里面的，比如`withholding`\(免密支付`Switch`\)控件里面`fields`参数是怎么放进去的呢？下面以配置免密支付Switch开关为例，看看数据产生链路是怎么产生的：
 
+
+
 ![](https://gw.alipayobjects.com/zos/skylark/c30f5819-6fbd-4a66-8f3b-e6bbab3a94dd/2018/png/1453e9de-1125-42a2-aaa6-ad58eec06efc.png)
-
-
 
 ### 2.3. 奥创还能做什么
 
@@ -93,8 +87,6 @@
 虽然后面看到许多问题其实在开发[Issues](http://gitlab.alibaba-inc.com/ultron/ultron-doc/issues)里面能找到，但是对系统不熟悉的人，看这样的标题没有目标性和系统性，要是形成一个Gitbook格式的教程就好了或者在系统操作界面加上链接也好。将开发手册的Issues按步骤文档化，要不然有点跳跃。
 
 奥创已约束了`ViewModel`的交互协议，但是对于前端，大部分都是业务组件居多，组件的复用程度会受基础组件的组合能力而影响
-
-
 
 ## 三、怎么知道用户有没有打开免密支付开关
 
@@ -132,13 +124,9 @@ OrderCreatingRequest
 
 ![](https://gw.alipayobjects.com/zos/skylark/2c25541f-2123-48b4-9e2b-dd2464d6152d/2018/png/e00934e2-ae00-44c1-a014-81a8622ee47f.png)
 
-
-
 ## 五、独立解约
 
 ![](https://gw.alipayobjects.com/zos/skylark/80001313-b001-4116-9d77-c3cffcba4c80/2018/png/b8ce921d-0a1b-4c7f-9540-2bcef43c1202.png)
-
-
 
 ## 六、优化
 
@@ -166,8 +154,6 @@ OrderCreatingRequest
 
 接入RocketMQ，在用户触发签约动作后发出消息，Listener若发现数据未同步尝试重试，直到数据同步，次数限制10次
 
-
-
 #### 6.1.2. 数据双写
 
 * 依赖支付宝回调通知将签约协议写入LiteTao后台
@@ -186,8 +172,6 @@ OrderCreatingRequest
 
 #### buy2业务日志
 
-
-
 ### 6.3. 安全
 
 * 不依赖客户端数据，以异步通知或直接导支付宝查询的数据为准
@@ -201,8 +185,6 @@ OrderCreatingRequest
 ### 7.1. 下单预览域业务方加入View
 
 ```
-
-
 @AbilityExtension
 (
 name
@@ -232,8 +214,6 @@ shoppingTarget
 ### 7.2. 支付域拦截加入免密支付参数
 
 ```
-
-
 @AbilityExtension
 (
 name
@@ -257,11 +237,7 @@ req
 // 在自己的扩展点中加入条件判断、免密支付上下文参数透传逻辑
 ```
 
-
-
 ### 存储方案
-
-
 
 ## 奥创References
 
