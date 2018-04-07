@@ -76,8 +76,6 @@
 
 回顾图一可以看出页面数据的布局就是在json的`hierarchy.structure`里面定义的，而这个结构数据又是在上图的结构化管理里面定义的，现在页面布局知道了，控件元数据与控件是怎么对应起来的也知道了，那么控件的元数据又是怎么`set`到`data`里面的，比如`withholding`\(免密支付`Switch`\)控件里面`fields`参数是怎么放进去的呢？下面以配置免密支付Switch开关为例，看看数据产生链路是怎么产生的：
 
-
-
 ![](https://gw.alipayobjects.com/zos/skylark/c30f5819-6fbd-4a66-8f3b-e6bbab3a94dd/2018/png/1453e9de-1125-42a2-aaa6-ad58eec06efc.png)
 
 ### 2.3. 奥创还能做什么
@@ -102,9 +100,8 @@
 
 当然如果我们的业务`Model`上有回收组件值的`field`，则直接引用`set`方法，奥创会用反射方式将其`set()`进去，如下单模型里面的`memo`（卖家留言信息），它再`OrderDTO`里面
 
-```
-OrderCreatingRequest
-: 
+```yaml
+OrderCreatingRequest: 
 # 订单创建Bean，用来接收整个ViewModel映射来的值
 
 
