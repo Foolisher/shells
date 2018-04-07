@@ -103,15 +103,9 @@
 ```yaml
 OrderCreatingRequest: 
 # 订单创建Bean，用来接收整个ViewModel映射来的值
-
-
-  OrderDTO
-: 
+OrderDTO: 
 # 订单Bean 
-
-
-  memo
-: 
+memo: 
 # 买家留言(String)
 ```
 
