@@ -1,6 +1,6 @@
 **一、基础题**
 
-* 怎么解决Hash冲突；（开放地址法、链地址法、再哈希法、建立公共溢出区等）
+* 怎么解决Hash冲突；（开放地址法、链地址法、再哈希法、建立公共溢出区等）  
 
 * 写出一个必然会产生死锁的伪代码；
 
@@ -26,7 +26,7 @@
 
 * CopyOnWriteArrayList是什么；
 
-* 序列化和反序列化底层如何实现的（ObjectOutputStream 、ObjectInputStream、 readObject  writeObject）；
+* 序列化和反序列化底层如何实现的（ObjectOutputStream 、ObjectInputStream、 readObject  writeObject）；
 
 * 如何调试多线程的程序；
 
@@ -100,7 +100,7 @@
 
 * 常见的ipv4地址的展现形式如“168.0.0.1”，请实现ip地址和int类型的相互转换。（使用位移的方式）
 
-* 现网某个服务部署在多台Liunx服务器上，其中一台突然出现CPU 100%的情况，而其他服务器正常，请列举可能导致这种情况发生的原因？如果您遇到这样的情况，应如何定位？内存？CPU？发布？debug？请求量？  
+* 现网某个服务部署在多台Liunx服务器上，其中一台突然出现CPU 100%的情况，而其他服务器正常，请列举可能导致这种情况发生的原因？如果您遇到这样的情况，应如何定位？内存？CPU？发布？debug？请求量？
 
 **七、大数据量问题（后边会有专题单独讨论）**
 
@@ -112,8 +112,7 @@
 
 此话题后边会有专门的文章探讨，如果有等不及的小伙伴，可以移步参考：
 
-1、https://blog.csdn.net/v\_july\_v/article/details/6279498  
+1、[https://blog.csdn.net/v\_july\_v/article/details/6279498](https://blog.csdn.net/v_july_v/article/details/6279498)
 
-
-2、https://blog.csdn.net/v\_july\_v/article/details/7382693
+2、[https://blog.csdn.net/v\_july\_v/article/details/7382693](https://blog.csdn.net/v_july_v/article/details/7382693)
 
