@@ -44,7 +44,6 @@
   * [AOP](Spring/AOP.md)
   * [IOC](Spring/IOC.md)
   * [SpringMVC](Spring/SpringMVC.md)
-  * [Bean](Spring/Bean.md)
   * [Cache](Spring/cache.md)
   * [issues](Spring/issues/README.md)
     * [jrebel引起的webapp资源加载问题](Spring/issues/jrebel引起的webapp资源加载问题.md)
