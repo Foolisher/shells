@@ -54,6 +54,7 @@
   * [设计](kafka/she-ji.md)
   * [问题](kafka/问题.md)
   * 内部原理
+  * [可靠传输](kafka/ke-kao-chuan-shu.md)
 * [架构与设计](架构与设计/readme.md)
   * [敏捷开发](架构与设计/min-jie-kai-fa.md)
   * [项目结构设计原则](架构与设计/项目结构设计原则.md)
