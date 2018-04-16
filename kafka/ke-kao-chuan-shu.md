@@ -30,9 +30,13 @@ leader用于保证最小followers可用数量，如果followers可用数量小�
 2. 消息体错误，消息体太大，格式错误等
 3. 非broker返回的错误，自己处理
 
-
-
 ## 3. 消费者如何保证消息可靠性
+
+1. commit-by-period，consumer消费期间crash，period期间内的消息会重复消费 
+   `auto.commit.interval.ms`
+
+2. commit-offset after consuming，如果commit-offset失败，消息重复消费
+3. commit-offset before consuming，如果consuming失败，消息漏消费，问题严重
 
 
 
