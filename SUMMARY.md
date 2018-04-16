@@ -71,6 +71,7 @@
   * [控件渲染](技术/React/控件渲染.md)
   * [语法](技术/React/语法.md)
   * [基础理论](技术/React/基础理论.md)
+* [RxJava](RxJava/README.md)
 * [分布式](分布式/README.md)
   * [一致性](分布式/一致性.md)
   * [zookeeper](分布式/zookeeper.md)
@@ -103,7 +104,6 @@
   * [Java1](面试/java1.md)
   * [Java2](面试/java2.md)
   * [Java3](面试/java3.md)
-* [RxJava](RxJava/README.md)
 
 ---
 
