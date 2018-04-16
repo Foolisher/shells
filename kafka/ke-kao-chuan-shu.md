@@ -14,6 +14,8 @@ leader用于保证最小followers可用数量，如果followers可用数量小�
 * acks=1 leader有应答即返回
 * acks=all 所有replicas有应答才返回
 
+## 生产者重试
+
 
 
 
