@@ -1,10 +1,14 @@
 ## 
 
+## 业务现状
+
+如何解决业务流程可配置化；如何解决业务修改、业务逻辑新增？这些都是我们业务系统中最为常见又经常没有
+
 > how to descript Extension:
 >
 > doSomething on Target in the ability Definition
 >
-> --&gt; doSomething\(target\);
+> --&gt; doSomething\(target\) ==&gt; rstObj
 >
 > how to find Extension:
 >
