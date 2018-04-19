@@ -11,6 +11,7 @@
   * [CSS](技术/css.md)
   * [Spock](技术/Spock.md)
   * [工作流](技术/工作流.md)
+  * [Redis](技术/Redis.md)
 * [JVM](JVM/README.md)
   * [垃圾回收](JVM/垃圾回收.md)
 * [并发](技术/并发.md)
@@ -97,7 +98,10 @@
   * [秒杀](电商/秒杀.md)
   * [优惠玩法](电商/优惠玩法.md)
   * [导购](电商/导购.md)
+  * 库存高并发
 * [编码](编码/readme.md)
+* [MySQL](MySQL/README.md)
+  * [Indexing](MySQL/indexing.md)
 * [读书](读书/readme.md)
 * [TMF2](TMF2/readme.md)
   * [设计](TMF2/设计.md)
@@ -108,9 +112,11 @@
   * [Java3](面试/java3.md)
 * [交易](交易/README.md)
   * [建模](交易/建模.md)
+  * [若海分享](交易/若海分享.md)
 * [提升](提升/README.md)
   * [自我驱动](提升/自我驱动.md)
   * [职业规划](提升/职业规划.md)
+  * [时间管理](提升/时间管理.md)
 
 ---
 
