@@ -49,6 +49,7 @@
   * [issues](Spring/issues/README.md)
     * [jrebel引起的webapp资源加载问题](Spring/issues/jrebel引起的webapp资源加载问题.md)
   * [tx](Spring/tx.md)
+  * [设计模式](Spring/设计模式.md)
 * [HSF](HSF/README.md)
   * [设计](HSF/she-ji.md)
 * [Kafka](Kafka/kafka.md)
