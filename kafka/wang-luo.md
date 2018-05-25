@@ -1,6 +1,4 @@
-
-
-```
+```java
 System.out.prinlnt("");
 ```
 
