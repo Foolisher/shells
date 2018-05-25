@@ -57,6 +57,7 @@
   * [问题](kafka/问题.md)
   * 内部原理
   * [可靠传输](kafka/ke-kao-chuan-shu.md)
+  * [网络](kafka/网络.md)
 * [架构与设计](架构与设计/readme.md)
   * [怎么做压测](架构与设计/zen-yao-zuo-ya-ce.md)
   * [项目结构设计原则](架构与设计/项目结构设计原则.md)
